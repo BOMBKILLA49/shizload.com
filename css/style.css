@@ -67,7 +67,7 @@ h6, .btn-default.btn-default-light, .domain-offering, .btn-default.btn-default-o
 }
 
 .primary-color, .domain-pricing ul li a, .single-feature:hover h3, .single-feature:hover i {
-  color: #af0a79 !important;
+  color: #fe880a !important;
 }
 
 .secondary-color, .domain-pricing ul li a:hover, .single-service i, .single-feature i, .hero-right .hero-search-form ul li a:hover, .v4-hero .single-h-feature:hover h3, .v4-hero .single-h-feature:hover i, .feature-list li, .domain-offer, a:hover {
@@ -96,7 +96,7 @@ h6, .btn-default.btn-default-light, .domain-offering, .btn-default.btn-default-o
 }
 
 .primary-bg, .single-pricing-offer, .loader:after {
-  background: #af0a79 !important;
+  background: #fe880a !important;
 }
 
 .secondary-bg, .domina-pricing thead, .contact-form-wrap h3, .single-service:hover, .sea .wave:nth-of-type(3), .search-form button:hover, .social-links a:hover, .loader:before, .section-title-1:before, .btn-default:hover.btn-default-outline, .btn-default {
@@ -128,7 +128,7 @@ h6, .btn-default.btn-default-light, .domain-offering, .btn-default.btn-default-o
 }
 
 .primary-border {
-  border-color: #af0a79 !important;
+  border-color: #fe880a !important;
 }
 
 .secondary-border, .gray-bg-2 .social-links a, .domain-pricing-v2 .social-links a, #pricing-table .social-links a, .single-service .social-links a, .single-feature .social-links a, .domain-offering, .btn-default:hover.btn-default-outline, .btn-default {
@@ -8049,7 +8049,7 @@ h6 {
   margin-right: 5px;
 }
 .shape {
-  fill: #af0a79;
+  fill: #fe880a;
 }
 
 .text-bg {
