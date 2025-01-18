@@ -8051,9 +8051,9 @@ a:hover {
 
 /* BUTTONS */
 .btn-default {
-  background: #af0a79;
+  background: #fe880a;
   color: #ffffff;
-  border: 1px solid #af0a79;
+  border: 1px solid #fe880a;
   border-radius: 0px;
   padding: 12px 25px;
   font-weight: 700; }
@@ -8067,9 +8067,9 @@ a:hover {
   color: #111111; }
 
 .btn-default:hover.btn-default-outline {
-  background: #af0a79;
+  background: #fe880a;
   color: #ffffff;
-  border: 1px solid #af0a79; }
+  border: 1px solid #fe880a; }
 
 .btn-default-light {
   background: #fff;
@@ -8190,7 +8190,7 @@ a:hover {
   padding-left: 30px;
   padding-right: 30px;
   background: #fff;
-  color: #af0a79;
+  color: #fe880a;
   border-radius: 0px;
   border: none;
   text-transform: uppercase; }
@@ -8200,7 +8200,7 @@ a:hover {
   box-shadow: none; }
 
 .search-form button:hover {
-  background: #af0a79; }
+  background: #fe880a; }
 
 .hero-right ul {
   text-align: center;
@@ -8250,14 +8250,14 @@ a:hover {
   font-size: 60px; }
 
 .domain-offer {
-  color: #af0a79; }
+  color: #fe880a; }
 
 .feature-list {
   padding-left: 20px;
   margin-bottom: 25px; }
   .feature-list li {
     margin-bottom: 15px;
-    color: #af0a79;
+    color: #fe880a;
     font-weight: 700; }
 
 .hero-btn-wrapper {
@@ -8279,10 +8279,10 @@ a:hover {
     line-height: 45px;
     text-align: center;
     border: 1px solid #f1f1f1;
-    color: #af0a79;
+    color: #fe880a;
     margin-right: 5px; }
     .social-links a:hover {
-      background: #af0a79;
+      background: #fe880a;
       color: #ffffff; }
 
 .shape {
@@ -8367,9 +8367,9 @@ a:hover {
     background: transparent;
     box-shadow: -4px 49px 79px 0px rgba(0, 0, 0, 0.15); }
     .single-feature:hover i {
-      color: #af0a79; }
+      color: #fe880a; }
     .single-feature:hover h3 {
-      color: #af0a79; }
+      color: #fe880a; }
 
 .feature-bottom h2 {
   font-size: 36px; }
