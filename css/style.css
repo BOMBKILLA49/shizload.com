@@ -8121,7 +8121,8 @@ h6 {
 
 /* HERO VERSION 3 */
 .full-height {
-  min-height: 100vh;
+   min-height: 100vh; /* Instead of height: 100vh */
+   overflow: visible; /* Ensure content spills out */
 }
 
 .hero-area h2 {
