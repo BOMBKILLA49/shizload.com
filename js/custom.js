@@ -191,28 +191,3 @@ function scrollTopPercentage() {
   $("#scroll-percentage").on("click", scrollToTop);
 }
 scrollTopPercentage(); 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const priceInputs = document.querySelectorAll('.price-input');
-  const purchaseButtons = document.querySelectorAll('.purchase-btn');
-
-  priceInputs.forEach(input => {
-    input.addEventListener('input', function () {
-      const plan = this.getAttribute('data-plan');
-      const newPrice = this.value;
-      const purchaseBtn = document.querySelector(`.purchase-btn[data-plan="${plan}"]`);
-      
-      // Update the purchase button link dynamically
-      purchaseBtn.href = `/purchase?plan=${plan}&price=${newPrice}`;
-    });
-  });
-
-  // Initial setup of purchase links
-  purchaseButtons.forEach(btn => {
-    const plan = btn.getAttribute('data-plan');
-    const priceInput = document.querySelector(`.price-input[data-plan="${plan}"]`);
-    const initialPrice = priceInput.value;
-    btn.href = `/purchase?plan=${plan}&price=${initialPrice}`;
-  });
-});
-</script>
