@@ -956,13 +956,13 @@
 <script src="js/custom.js"></script>  
 <script src="js/sweetalert.min.js"></script>
 <script src="js/contact.js"></script>
-  <script>
+<script>
 document.addEventListener('DOMContentLoaded', function () {
-  const priceInputs = document.querySelectorAll('.price-input');
+  const priceSelects = document.querySelectorAll('.price-select');
   const purchaseButtons = document.querySelectorAll('.purchase-btn');
 
-  priceInputs.forEach(input => {
-    input.addEventListener('input', function () {
+  priceSelects.forEach(select => {
+    select.addEventListener('change', function () {
       const plan = this.getAttribute('data-plan');
       const newPrice = this.value;
       const purchaseBtn = document.querySelector(`.purchase-btn[data-plan="${plan}"]`);
@@ -975,8 +975,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // Initial setup of purchase links
   purchaseButtons.forEach(btn => {
     const plan = btn.getAttribute('data-plan');
-    const priceInput = document.querySelector(`.price-input[data-plan="${plan}"]`);
-    const initialPrice = priceInput.value;
+    const priceSelect = document.querySelector(`.price-select[data-plan="${plan}"]`);
+    const initialPrice = priceSelect.value;
     btn.href = `/purchase?plan=${plan}&price=${initialPrice}`;
   });
 });
