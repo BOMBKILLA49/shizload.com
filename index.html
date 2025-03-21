@@ -445,14 +445,11 @@
         <div class="pricing">
           <div class="pricing-plans">
             <span>Individuals (Daily)</span>
-            <h5>
-              $<select class="price-select" data-plan="individuals">
-                <option value="5">5</option>
-                <option value="50" selected>50</option>
-                <option value="100">100</option>
-              </select>
-              <sub>/ day</sub>
-            </h5>
+            <div class="price-options" data-plan="individuals">
+              <label><input type="radio" name="individuals-price" value="5" data-plan="individuals"> $5 / day</label>
+              <label><input type="radio" name="individuals-price" value="50" data-plan="individuals" checked> $50 / day</label>
+              <label><input type="radio" name="individuals-price" value="100" data-plan="individuals"> $100 / day</label>
+            </div>
           </div>
           <div class="pricing-plans-text">
             <i class="flaticon-price-tag"></i>
@@ -471,14 +468,11 @@
         <div class="pricing">
           <div class="pricing-plans">
             <span>Professionals (Weekly)</span>
-            <h5>
-              $<select class="price-select" data-plan="professionals">
-                <option value="5">5</option>
-                <option value="50" selected>50</option>
-                <option value="100">100</option>
-              </select>
-              <sub>/ week</sub>
-            </h5>
+            <div class="price-options" data-plan="professionals">
+              <label><input type="radio" name="professionals-price" value="5" data-plan="professionals"> $5 / week</label>
+              <label><input type="radio" name="professionals-price" value="50" data-plan="professionals" checked> $50 / week</label>
+              <label><input type="radio" name="professionals-price" value="100" data-plan="professionals"> $100 / week</label>
+            </div>
           </div>
           <div class="pricing-plans-text">
             <i class="flaticon-price-tag"></i>
@@ -497,14 +491,11 @@
         <div class="pricing mb-0">
           <div class="pricing-plans">
             <span>Business (Monthly)</span>
-            <h5>
-              $<select class="price-select" data-plan="business">
-                <option value="5">5</option>
-                <option value="50" selected>50</option>
-                <option value="100">100</option>
-              </select>
-              <sub>/ mo</sub>
-            </h5>
+            <div class="price-options" data-plan="business">
+              <label><input type="radio" name="business-price" value="5" data-plan="business"> $5 / mo</label>
+              <label><input type="radio" name="business-price" value="50" data-plan="business" checked> $50 / mo</label>
+              <label><input type="radio" name="business-price" value="100" data-plan="business"> $100 / mo</label>
+            </div>
           </div>
           <div class="pricing-plans-text">
             <i class="flaticon-price-tag"></i>
