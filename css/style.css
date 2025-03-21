@@ -2067,3 +2067,17 @@ footer ul.shaps-img li:nth-child(3) {
 .team:after,.team span,.team a,.team h4,ul.chek li img ,.widget-title ul li a,footer a,.presenting i:after{
     transition: .4s all;
 } 
+.price-input {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.pricing-plans h5 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
