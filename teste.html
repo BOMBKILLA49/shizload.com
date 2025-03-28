@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shizload of Squares</title>
+  <style>
+    .grid { display: grid; grid-template-columns: repeat(10, 50px); gap: 2px; }
+    .square { width: 50px; height: 50px; border: 1px solid #000; text-align: center; cursor: pointer; }
+    .taken { background: #ccc; }
+  </style>
+</head>
+<body>
+  <h1>Shizload of Squares - NFL 2025</h1>
+  <p>Pick a square for 0.05 LTC. Win the pot!</p>
+  <button id="connect-wallet">Connect Wallet</button>
+  <div id="grid" class="grid"></div>
+  <div id="status"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.7.0/dist/web3.min.js"></script>
+  <script>
+    const contractAddress = 'YOUR_CONTRACT_ADDRESS'; // Deployed later
+    const abi = [/* ABI from smart contract */]; // Add after writing contract
+    let web3, contract, account;
+
+    // Connect wallet (MetaMask)
+    document.getElementById('connect-wallet').onclick = async () => {
+      if (window.ethereum) {
+        web3 = new Web3(window.ethereum);
+        await window.ethereum.request({ method: 'eth_requestAccounts' });
+        account = (await web3.eth.getAccounts())[0];
+        contract = new web3.eth.Contract(abi, contractAddress);
+        document.getElementById('status').innerText = `Connected: ${account}`;
+        loadSquares();
+      } else {
+        alert('Install MetaMask!');
+      }
+    };
+
+    // Load squares from contract
+    async function loadSquares() {
+      const grid = document.getElementById('grid');
+      grid.innerHTML = '';
+      const squares = await contract.methods.getSquares().call();
+      for (let i = 0; i < 100; i++) {
+        const square = document.createElement('div');
+        square.className = 'square' + (squares[i].taken ? ' taken' : '');
+        square.textContent = squares[i].taken ? 'X' : '';
+        if (!squares[i].taken) {
+          square.onclick = () => pickSquare(i);
+        }
+        grid.appendChild(square);
+      }
+    }
+
+    // Pick a square
+    async function pickSquare(index) {
+      try {
+        await contract.methods.pickSquare(index).send({
+          from: account,
+          value: web3.utils.toWei('0.05', 'ether') // Adjust for LTC if on Litecoin chain
+        });
+        document.getElementById('status').innerText = 'Square claimed!';
+        loadSquares();
+      } catch (e) {
+        document.getElementById('status').innerText = `Error: ${e.message}`;
+      }
+    }
+  </script>
+</body>
+</html>
