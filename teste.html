@@ -10,59 +10,54 @@
 </head>
 <body>
   <h1>Shizload of Squares - NFL 2025</h1>
-  <p>Pick a square for 0.05 LTC. Win the pot!</p>
+  <p>Pick a square for 10 MATIC (~$5). Win the pot!</p>
   <button id="connect-wallet">Connect Wallet</button>
   <div id="grid" class="grid"></div>
   <div id="status"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/web3@1.7.0/dist/web3.min.js"></script>
   <script>
-    const contractAddress = 'YOUR_CONTRACT_ADDRESS'; // Deployed later
-    const abi = [/* ABI from smart contract */]; // Add after writing contract
+    const contractAddress = '0x0'; // Placeholder until deployed
+    const abi = []; // Placeholder
     let web3, contract, account;
 
-    // Connect wallet (MetaMask)
-    document.getElementById('connect-wallet').onclick = async () => {
-      if (window.ethereum) {
-        web3 = new Web3(window.ethereum);
+    async function connectWallet() {
+      if (!window.ethereum) {
+        alert('Please install MetaMask!');
+        return;
+      }
+      web3 = new Web3(window.ethereum);
+      try {
         await window.ethereum.request({ method: 'eth_requestAccounts' });
         account = (await web3.eth.getAccounts())[0];
-        contract = new web3.eth.Contract(abi, contractAddress);
         document.getElementById('status').innerText = `Connected: ${account}`;
+        contract = new web3.eth.Contract(abi, contractAddress);
         loadSquares();
-      } else {
-        alert('Install MetaMask!');
+      } catch (e) {
+        document.getElementById('status').innerText = `Error: ${e.message}`;
       }
-    };
+    }
 
-    // Load squares from contract
+    document.getElementById('connect-wallet').addEventListener('click', connectWallet);
+
     async function loadSquares() {
       const grid = document.getElementById('grid');
       grid.innerHTML = '';
-      const squares = await contract.methods.getSquares().call();
+      // Dummy data until contract is live
+      const squares = Array(100).fill(false);
       for (let i = 0; i < 100; i++) {
         const square = document.createElement('div');
-        square.className = 'square' + (squares[i].taken ? ' taken' : '');
-        square.textContent = squares[i].taken ? 'X' : '';
-        if (!squares[i].taken) {
+        square.className = 'square' + (squares[i] ? ' taken' : '');
+        square.textContent = squares[i] ? 'X' : '';
+        if (!squares[i]) {
           square.onclick = () => pickSquare(i);
         }
         grid.appendChild(square);
       }
     }
 
-    // Pick a square
     async function pickSquare(index) {
-      try {
-        await contract.methods.pickSquare(index).send({
-          from: account,
-          value: web3.utils.toWei('0.05', 'ether') // Adjust for LTC if on Litecoin chain
-        });
-        document.getElementById('status').innerText = 'Square claimed!';
-        loadSquares();
-      } catch (e) {
-        document.getElementById('status').innerText = `Error: ${e.message}`;
-      }
+      document.getElementById('status').innerText = 'Contract not deployed yet!';
     }
   </script>
 </body>
