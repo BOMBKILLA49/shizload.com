@@ -17,9 +17,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/web3@1.7.0/dist/web3.min.js"></script>
   <script>
-    const contractAddress = '0x0'; // Placeholder until deployed
-    const abi = []; // Placeholder
-    let web3, contract, account;
+    let web3, account;
 
     async function connectWallet() {
       if (!window.ethereum) {
@@ -31,8 +29,7 @@
         await window.ethereum.request({ method: 'eth_requestAccounts' });
         account = (await web3.eth.getAccounts())[0];
         document.getElementById('status').innerText = `Connected: ${account}`;
-        contract = new web3.eth.Contract(abi, contractAddress);
-        loadSquares();
+        loadSquares(); // Just for testing, no contract yet
       } catch (e) {
         document.getElementById('status').innerText = `Error: ${e.message}`;
       }
@@ -40,24 +37,21 @@
 
     document.getElementById('connect-wallet').addEventListener('click', connectWallet);
 
-    async function loadSquares() {
+    function loadSquares() {
       const grid = document.getElementById('grid');
       grid.innerHTML = '';
-      // Dummy data until contract is live
-      const squares = Array(100).fill(false);
+      const squares = Array(100).fill(false); // Dummy data
       for (let i = 0; i < 100; i++) {
         const square = document.createElement('div');
         square.className = 'square' + (squares[i] ? ' taken' : '');
         square.textContent = squares[i] ? 'X' : '';
-        if (!squares[i]) {
-          square.onclick = () => pickSquare(i);
-        }
+        square.onclick = () => pickSquare(i);
         grid.appendChild(square);
       }
     }
 
-    async function pickSquare(index) {
-      document.getElementById('status').innerText = 'Contract not deployed yet!';
+    function pickSquare(index) {
+      document.getElementById('status').innerText = `Picked square ${index} (contract not deployed yet)`;
     }
   </script>
 </body>
