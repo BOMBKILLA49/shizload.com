@@ -16,11 +16,11 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(10, 60px);
-      grid-template-rows: repeat(10, 60px);
+      grid-template-columns: repeat(11, 60px); /* 10 squares + blank labels */
+      grid-template-rows: repeat(11, 60px); /* 10 squares + blank labels */
       gap: 2px;
       margin: 20px auto;
-      max-width: 620px;
+      max-width: 660px;
     }
     .square {
       width: 60px;
@@ -37,6 +37,10 @@
     .square:hover {
       background-color: #e0e0e0;
     }
+    .label {
+      background-color: #ddd;
+      font-weight: bold;
+    }
     .form-container {
       display: none;
       position: absolute;
@@ -49,11 +53,15 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
       z-index: 10;
     }
-    .square input[type="checkbox"]:checked + .form-container {
+    .square input[type="checkbox"]:checked ~ .form-container {
       display: block;
     }
     .square input[type="checkbox"] {
-      display: none;
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
     }
     .taken {
       background-color: #ccc;
@@ -71,7 +79,21 @@
   <h1>Shizload of Sports Squares - NFL 2025</h1>
   <p>Pick a square for $5! Match the score, win the pot!</p>
   <div class="grid">
-    <!-- Squares 1-100 -->
+    <!-- Top Row Labels (Blank 0-9) -->
+    <div class="square label"></div>
+    <div class="square label"></div>
+    <div class="square label"></div>
+    <div class="square label"></div>
+    <div class="square label"></div>
+    <div class="square label"></div>
+    <div class="square label"></div>
+    <div class="square label"></div>
+    <div class="square label"></div>
+    <div class="square label"></div>
+    <div class="square label"></div>
+
+    <!-- Row 1 -->
+    <div class="square label"></div>
     <div class="square">
       1
       <input type="checkbox" id="s1">
@@ -191,6 +213,8 @@
       </div>
     </div>
 
+    <!-- Row 2 -->
+    <div class="square label"></div>
     <div class="square">
       11
       <input type="checkbox" id="s11">
@@ -322,6 +346,8 @@
       </div>
     </div>
 
+    <!-- Row 3 -->
+    <div class="square label"></div>
     <div class="square">
       21
       <input type="checkbox" id="s21">
@@ -453,6 +479,8 @@
       </div>
     </div>
 
+    <!-- Row 4 -->
+    <div class="square label"></div>
     <div class="square">
       31
       <input type="checkbox" id="s31">
@@ -584,6 +612,8 @@
       </div>
     </div>
 
+    <!-- Row 5 -->
+    <div class="square label"></div>
     <div class="square">
       41
       <input type="checkbox" id="s41">
@@ -715,6 +745,8 @@
       </div>
     </div>
 
+    <!-- Row 6 -->
+    <div class="square label"></div>
     <div class="square">
       51
       <input type="checkbox" id="s51">
@@ -846,6 +878,8 @@
       </div>
     </div>
 
+    <!-- Row 7 -->
+    <div class="square label"></div>
     <div class="square">
       61
       <input type="checkbox" id="s61">
@@ -977,6 +1011,8 @@
       </div>
     </div>
 
+    <!-- Row 8 -->
+    <div class="square label"></div>
     <div class="square">
       71
       <input type="checkbox" id="s71">
@@ -1108,6 +1144,8 @@
       </div>
     </div>
 
+    <!-- Row 9 -->
+    <div class="square label"></div>
     <div class="square">
       81
       <input type="checkbox" id="s81">
@@ -1239,6 +1277,8 @@
       </div>
     </div>
 
+    <!-- Row 10 -->
+    <div class="square label"></div>
     <div class="square">
       91
       <input type="checkbox" id="s91">
