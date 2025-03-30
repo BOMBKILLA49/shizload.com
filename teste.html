@@ -1,58 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Shizload of Squares</title>
+  <meta charset="UTF-8">
+  <title>Shizload of Sports Squares</title>
   <style>
-    .grid { display: grid; grid-template-columns: repeat(10, 50px); gap: 2px; }
-    .square { width: 50px; height: 50px; border: 1px solid #000; text-align: center; cursor: pointer; }
-    .taken { background: #ccc; }
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(11, 60px); /* 10 squares + labels */
+      grid-template-rows: repeat(11, 60px); /* 10 squares + labels */
+      gap: 2px;
+      margin: 20px auto;
+      max-width: 660px;
+    }
+    .square {
+      width: 60px;
+      height: 60px;
+      background-color: #fff;
+      border: 1px solid #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+    }
+    .square:hover {
+      background-color: #e0e0e0;
+    }
+    .label {
+      background-color: #ddd;
+      font-weight: bold;
+    }
+    .form-container {
+      display: none;
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #fff;
+      padding: 10px;
+      border: 1px solid #000;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .square input[type="checkbox"]:checked + .form-container {
+      display: block;
+    }
+    .square input[type="checkbox"] {
+      display: none;
+    }
+    .taken {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    .taken::after {
+      content: 'X';
+      font-size: 20px;
+      color: #666;
+    }
   </style>
 </head>
 <body>
-  <h1>Shizload of Squares - NFL 2025</h1>
-  <p>Pick a square for 10 MATIC (~$5). Win the pot!</p>
-  <button id="connect-wallet">Connect Wallet</button>
-  <div id="grid" class="grid"></div>
-  <div id="status"></div>
-
-  <script src="https://cdn.jsdelivr.net/npm/web3@1.7.0/dist/web3.min.js"></script>
-  <script>
-    let web3, account;
-
-    async function connectWallet() {
-      if (!window.ethereum) {
-        alert('Please install MetaMask!');
-        return;
-      }
-      web3 = new Web3(window.ethereum);
-      try {
-        await window.ethereum.request({ method: 'eth_requestAccounts' });
-        account = (await web3.eth.getAccounts())[0];
-        document.getElementById('status').innerText = `Connected: ${account}`;
-        loadSquares(); // Just for testing, no contract yet
-      } catch (e) {
-        document.getElementById('status').innerText = `Error: ${e.message}`;
-      }
-    }
-
-    document.getElementById('connect-wallet').addEventListener('click', connectWallet);
-
-    function loadSquares() {
-      const grid = document.getElementById('grid');
-      grid.innerHTML = '';
-      const squares = Array(100).fill(false); // Dummy data
-      for (let i = 0; i < 100; i++) {
-        const square = document.createElement('div');
-        square.className = 'square' + (squares[i] ? ' taken' : '');
-        square.textContent = squares[i] ? 'X' : '';
-        square.onclick = () => pickSquare(i);
-        grid.appendChild(square);
-      }
-    }
-
-    function pickSquare(index) {
-      document.getElementById('status').innerText = `Picked square ${index} (contract not deployed yet)`;
-    }
-  </script>
-</body>
-</html>
+  <h1>Shiz
