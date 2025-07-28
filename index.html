@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="author" content="Shizload">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Adjusted viewport for better desktop scaling -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="shizload, shizload.com, domain for sale, cryptocurrency, meme coin">
     <meta name="description" content="Shizload.com is for sale for 1 BTC. Secure this memorable domain and its social handles.">
@@ -36,7 +35,14 @@
 
     <!-- Custom CSS for Desktop Fixes -->
     <style>
-        /* Ensure preloader displays correctly */
+        /* Reset and ensure full visibility */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        /* Preloader */
         .loader-wrapper {
             position: fixed;
             top: 0;
@@ -61,24 +67,25 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-        /* Fix layout for desktop */
-        body {
-            overflow-x: hidden;
-        }
+        /* Content containers */
         .content--intro, .content--fixed {
+            width: 100%;
             min-height: 100vh;
             position: relative;
-            width: 100%;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 1200px; /* Limit width for desktop */
+            padding-left: 15px;
+            padding-right: 15px;
         }
         .hero-area {
             padding: 50px 0;
         }
-        .container {
-            max-width: 1200px; /* Ensure content doesn't stretch too wide */
-        }
         .row.full-height {
-            min-height: calc(100vh - 100px); /* Adjust for header */
+            min-height: calc(100vh - 100px);
         }
+        /* Text styling */
         .domain-name {
             font-size: 3rem;
             color: #f28c38;
@@ -95,37 +102,43 @@
             display: flex;
             justify-content: center;
             gap: 15px;
+            padding: 0;
+        }
+        .social-links li {
+            list-style: none;
         }
         .social-links i {
             font-size: 1.5rem;
             color: #f28c38;
         }
-        .left-shape {
-            display: none; /* Hide if causing layout issues */
+        /* Hide potentially problematic elements */
+        .left-shape, .shape-wrap {
+            display: none; /* Hide SVGs if causing clipping */
         }
-        .shape-wrap {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            z-index: -1;
-        }
-        /* Form styling for desktop */
+        /* Form styling */
         .offer-form-wrap {
             max-width: 600px;
             margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
         }
         .form-control {
             width: 100%;
             padding: 10px;
             font-size: 1rem;
+            border-radius: 5px;
         }
         .btn-filled {
             background-color: #f28c38;
             color: #fff;
             padding: 10px 20px;
             border-radius: 5px;
+            border: none;
         }
-        /* Hide mobile-specific padding on desktop */
+        .btn-filled:hover {
+            background-color: #e07b00;
+        }
+        /* Fix responsive padding */
         @media (min-width: 992px) {
             .md-p-10px-b {
                 padding-bottom: 50px !important;
@@ -133,6 +146,25 @@
             .sm-p-15px {
                 padding: 50px !important;
             }
+            .p-50px-t {
+                padding-top: 50px !important;
+            }
+            .p-50px-b {
+                padding-bottom: 50px !important;
+            }
+            .col-lg-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+        /* Ensure images don't overflow */
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+        /* Hide next-demo link if causing issues */
+        .next-demo {
+            display: none;
         }
     </style>
 </head>
@@ -152,7 +184,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-12 text-center">
-                                    <a href="#"><img src="img/shizload-BTC-sale.png" alt="Shizload Logo" class="img-fluid" style="max-height: 80px;"></a>
+                                    <a href="#"><img src="img/shizload-BTC-sale.png" alt="Shizload Logo" class="img-fluid"></a>
                                 </div>
                             </div>
                         </div>
@@ -185,31 +217,18 @@
                                         <p><strong>SEND 1 BTC TO: bc1q73kmhr54matmtchctlem52mu8gjk0q349jkxu6</strong></p>
                                     </div>
                                 </div>
-                                <ul class="social-links list-unstyled">
+                                <ul class="social-links">
                                     <li><a href="#" aria-label="Facebook"><i class="icofont-facebook"></i></a></li>
                                     <li><a href="https://x.com/shizload" aria-label="Twitter"><i class="icofont-twitter"></i></a></li>
                                     <li><a href="https://www.instagram.com/shizload/" aria-label="Instagram"><i class="icofont-instagram"></i></a></li>
                                     <li><a href="https://www.tiktok.com/@shizload?lang=es" aria-label="TikTok"><i class="icofont-tiktok"></i></a></li>
                                 </ul>
                             </div>
-                            <!-- Right Content (Empty as in original) -->
+                            <!-- Right Content (Empty) -->
                             <div class="col-lg-6 p-50px-t p-50px-b text-lg-right text-center"></div>
                         </div>
                     </div>
-                    <!-- SVG Shape -->
-                    <svg height="0" width="0">
-                        <clipPath id="svgPath">
-                            <path fill="#FFFFFF" stroke="#000000" stroke-width="1.5794" stroke-miterlimit="10" d="M215,100.3c97.8-32.6,90.5-71.9,336-77.6
-                               c92.4-2.1,98.1,81.6,121.8,116.4c101.7,149.9,53.5,155.9,14.7,178c-96.4,54.9,5.4,269-257,115.1c-57-33.5-203,46.3-263.7,20.1
-                               c-33.5-14.5-132.5-45.5-95-111.1C125.9,246.6,98.6,139.1,215,100.3z"/>
-                        </clipPath>
-                    </svg>
                 </section>
-            </div>
-            <div class="shape-wrap">
-                <svg class="shape" width="100%" height="100vh" preserveAspectRatio="none" viewBox="0 0 1440 800">
-                    <path d="M -44,-50 C -52.71,28.52 15.86,8.186 184,14.69 383.3,22.39 462.5,12.58 638,14 835.5,15.6 987,6.4 1194,13.86 1661,30.68 1652,-36.74 1582,-140.1 1512,-243.5 15.88,-589.5 -44,-50 Z" pathdata:id="M -44,-50 C -137.1,117.4 67.86,445.5 236,452 435.3,459.7 500.5,242.6 676,244 873.5,245.6 957,522.4 1154,594 1593,753.7 1793,226.3 1582,-126 1371,-478.3 219.8,-524.2 -44,-50 Z"></path>
-                </svg>
             </div>
         </div>
 
@@ -224,7 +243,7 @@
                                 <h1 class="m-50px-b lg-m-25px-b"><span class="domain-offer">Make An Offer</span></h1>
                             </div>
                             <div class="row">
-                                <div class="offset-sm-1 col-sm-10 offset-lg-3 col-lg-6">
+                                <div class="offset-lg-3 col-lg-6 offset-md-1 col-md-10">
                                     <div class="offer-form-wrap shadow-1 p-50px sm-p-15px m-15px-b">
                                         <form id="offer-form" method="post" action="php/sendmail.php">
                                             <div class="message">
@@ -273,7 +292,6 @@
                         </div>
                     </div>
                 </div>
-                <a class="next-demo" href="index.html">Back <i class="icofont-arrow-right"></i></a>
             </div>
         </div>
     </main>
