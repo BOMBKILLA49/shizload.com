@@ -197,11 +197,18 @@
             font-style: normal;
         }
 
-        /* Added CSS to center social media icons in .action-icon */
+        /* Updated CSS to center social media icons horizontally in .action-icon */
+        .action-icon {
+            display: flex; /* Ensure horizontal layout */
+            flex-direction: row; /* Explicitly set row direction */
+            align-items: center; /* Center icons vertically within container */
+            gap: 10px; /* Space between icons */
+        }
+
         .action-icon a {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: center; /* Center icon horizontally within <a> */
+            align-items: center; /* Center icon vertically within <a> */
             width: 40px; /* Fixed width for consistent size */
             height: 40px; /* Fixed height for consistent size */
             background-color: #3b5998; /* Default to Facebook blue */
@@ -209,7 +216,6 @@
             text-decoration: none;
             border-radius: 8px;
             font-size: 20px; /* Adjust icon size */
-            margin: 5px; /* Space between icons */
             transform: translateY(5px); /* Lower icons slightly */
             transition: background-color 0.3s;
         }
