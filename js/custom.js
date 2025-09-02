@@ -339,3 +339,9 @@ var PATH = {};
 
 }(jQuery));
 
+
+function bookmarkPage() {
+    const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+    const shortcut = isMac ? 'Cmd+D' : 'Ctrl+D';
+    alert(`Please press ${shortcut} to bookmark "${document.title}".`);
+}
