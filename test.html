@@ -236,8 +236,47 @@
 				</ul>
 				<div class="menu-action d-flex">
 					<div class="action-icon">
-						<a class="menu-icon" href="javascript:void(0)" onclick="bookmarkPage()"><i class="fa-solid fa-bookmark"></i></a>
-						<a data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" class="menu-icon mobile-v-show"><i class="fa-solid fa-magnifying-glass"></i></a>
+						    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .menu-icon {
+            color: #28a745;
+            font-size: 24px;
+            text-decoration: none;
+            padding: 10px;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+        .menu-icon:hover {
+            color: #218838;
+        }
+    </style>
+    <a class="menu-icon" href="javascript:void(0)" onclick="subscribeToPush()"><i class="fa-solid fa-bookmark"></i></a>
+
+    <script>
+        async function subscribeToPush() {
+            try {
+                const permission = await Notification.requestPermission();
+                if (permission === 'granted') {
+                    const registration = await navigator.serviceWorker.register('/sw.js');
+                    const subscription = await registration.pushManager.subscribe({
+                        userVisibleOnly: true,
+                        applicationServerKey: 'YOUR_PUBLIC_VAPID_KEY' // Replace with your VAPID key
+                    });
+                    // Send subscription to your server
+                    await fetch('/subscribe', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(subscription)
+                    });
+                    alert('Subscribed to notifications!');
+                } else {
+                    alert('Please enable notifications to stay updated!');
+                }
+            } catch (error) {
+                console.error('Subscription failed:', error);
+                alert('Failed to subscribe. Try again or bookmark with Ctrl+D/Cmd+D.');
+            }
+        }
 					</div>
 					<a href="#" class="button-secondary">Free Comics</a>
 					<a href="#" class="ham-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
