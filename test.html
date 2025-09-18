@@ -445,74 +445,72 @@
                         <h3>Digital Roadmap to a Shizload</h3>
                         <p class="pt-2 pb-4">A wild journey through a cryptocurrency comic takes you on a roadmap to a $hizload, packed with valuable crypto information & smart tips to navigate through the blockchain jungle.</p>
                         
-                        <!-- Scrollable Checkmarks - EXACTLY 3 items per slide -->
-                        <div class="check-p-container">
-                          <div class="check-p" id="checkmarks-slider">
+                        <!-- SIMPLE CHECKMARK SLIDER -->
+                        <div class="checkmarks-wrapper">
+                          <div class="checkmarks-track" id="checkmarksTrack">
                             
-                            <!-- SLIDE 1: Original 3 checkmarks -->
-                            <div class="check-p-slide">
-                              <div class="check-p-item">
+                            <!-- SLIDE 1: Original 3 -->
+                            <div class="checkmark-slide">
+                              <div class="checkmark-item">
                                 <i class="fa-solid fa-check"></i>
-                                <span>We Offer Unique Comic Books & Arts</span>
+                                We Offer Unique Comic Books & Arts
                               </div>
-                              <div class="check-p-item">
+                              <div class="checkmark-item">
                                 <i class="fa-solid fa-check"></i>
-                                <span>Get Collection Of Creative Series</span>
+                                Get Collection Of Creative Series
                               </div>
-                              <div class="check-p-item">
+                              <div class="checkmark-item">
                                 <i class="fa-solid fa-check"></i>
-                                <span>Watch Cartoon And Kid Animation</span>
+                                Watch Cartoon And Kid Animation
                               </div>
                             </div>
                             
-                            <!-- SLIDE 2: Next 3 roadmap items -->
-                            <div class="check-p-slide">
-                              <div class="check-p-item">
+                            <!-- SLIDE 2: Next 3 -->
+                            <div class="checkmark-slide">
+                              <div class="checkmark-item">
                                 <i class="fa-solid fa-check"></i>
-                                <span>Learn Blockchain Fundamentals</span>
+                                Learn Blockchain Fundamentals
                               </div>
-                              <div class="check-p-item">
+                              <div class="checkmark-item">
                                 <i class="fa-solid fa-check"></i>
-                                <span>Master Crypto Trading Strategies</span>
+                                Master Crypto Trading Strategies
                               </div>
-                              <div class="check-p-item">
+                              <div class="checkmark-item">
                                 <i class="fa-solid fa-check"></i>
-                                <span>Understand DeFi Protocols</span>
+                                Understand DeFi Protocols
                               </div>
                             </div>
                             
-                            <!-- SLIDE 3: Final 3 roadmap items -->
-                            <div class="check-p-slide">
-                              <div class="check-p-item">
+                            <!-- SLIDE 3: Final 3 -->
+                            <div class="checkmark-slide">
+                              <div class="checkmark-item">
                                 <i class="fa-solid fa-check"></i>
-                                <span>Explore NFT Marketplaces</span>
+                                Explore NFT Marketplaces
                               </div>
-                              <div class="check-p-item">
+                              <div class="checkmark-item">
                                 <i class="fa-solid fa-check"></i>
-                                <span>Secure Your Digital Assets</span>
+                                Secure Your Digital Assets
                               </div>
-                              <div class="check-p-item">
+                              <div class="checkmark-item">
                                 <i class="fa-solid fa-check"></i>
-                                <span>Join Crypto Communities</span>
+                                Join Crypto Communities
                               </div>
                             </div>
                             
                           </div>
                           
-                          <!-- Navigation Arrows -->
-                          <button class="check-p-nav prev" id="prev-checkmark" disabled>
+                          <button class="nav-arrow prev-arrow" id="prevBtn" disabled>
                             <i class="fa-solid fa-chevron-left"></i>
                           </button>
-                          <button class="check-p-nav next" id="next-checkmark">
+                          <button class="nav-arrow next-arrow" id="nextBtn">
                             <i class="fa-solid fa-chevron-right"></i>
                           </button>
                         </div>
                         
-                        <!-- Dots Navigation -->
-                        <div class="check-p-dots" id="checkmarks-dots">
-                          <span class="check-p-dot active" data-slide="0"></span>
-                          <span class="check-p-dot" data-slide="1"></span>
-                          <span class="check-p-dot" data-slide="2"></span>
+                        <div class="dots-container" id="dotsContainer">
+                          <span class="dot active" onclick="goToSlide(0)"></span>
+                          <span class="dot" onclick="goToSlide(1)"></span>
+                          <span class="dot" onclick="goToSlide(2)"></span>
                         </div>
                         
                         <a class="button-circular vbox-item" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=4S8RC5zzG5g"><i class="fa-solid fa-play"></i> Watch Story</a>
