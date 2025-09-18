@@ -11330,3 +11330,447 @@ p {
         flex-direction: row;
     }
 }
+/* Enhanced Navigation Menu Styles - Fixed Social Icons */
+.navbar {
+    padding: 1rem 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.sticky-top.scrolled {
+    padding: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2c3e50 !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand span {
+    color: #e74c3c;
+    font-weight: 800;
+}
+
+.navbar-brand:hover {
+    color: #34495e !important;
+    transform: scale(1.02);
+}
+
+/* Menu Action Area - Fixed Spacing to Prevent Overlap */
+.menu-action {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end; /* Align to right */
+    gap: 20px; /* Gap between icons group, button, and hamburger */
+    position: relative;
+    flex-wrap: nowrap;
+    z-index: 10;
+}
+
+/* Social Icons - Perfect Circles, No Overlap, Balanced Size */
+.action-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Gap between individual icons */
+    margin: 0; /* No margins to avoid overlap */
+    padding: 0; /* No padding to keep tight control */
+    flex-shrink: 0; /* Prevent compression */
+    z-index: 12; /* Higher z-index to stay in front */
+}
+
+.action-icon a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 42px; /* Balanced width for desktop - equal to height */
+    height: 42px; /* Equal height for perfect circle */
+    border-radius: 50%; /* Ensures circle shape */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 16px; /* Balanced font size - no stretching */
+    line-height: 1 !important; /* Prevents vertical stretching */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    border: 2px solid transparent;
+    flex-shrink: 0 !important;
+    text-align: center;
+    box-sizing: border-box; /* Includes border in size */
+    vertical-align: middle; /* Fallback centering */
+}
+
+.action-icon a i {
+    line-height: 1 !important;
+    width: 100%;
+    height: 100%;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: inherit; /* Inherit from parent to avoid mismatch */
+}
+
+.action-icon a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+    border-radius: 50%;
+}
+
+.action-icon a:hover::before {
+    left: 100%;
+}
+
+.action-icon a:hover {
+    transform: translateY(-2px) scale(1.05); /* Reduced scale to avoid overlap on hover */
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+    border-color: rgba(255, 255, 255, 0.2);
+    z-index: 13; /* Even higher on hover */
+}
+
+@keyframes socialPulse {
+    0% { transform: translateY(-2px) scale(1.05); }
+    50% { transform: translateY(-3px) scale(1.1); }
+    100% { transform: translateY(-2px) scale(1.05); }
+}
+
+/* Specific Icon Colors - Explicit Sizes to Override Any Inheritance */
+.action-icon a[href*="reddit"] { 
+    background: linear-gradient(135deg, #ff4500 0%, #ff6347 100%); 
+    width: 42px !important;
+    height: 42px !important;
+}
+.action-icon a[href*="reddit"]:hover { 
+    background: linear-gradient(135deg, #e63900 0%, #ff4500 100%); 
+}
+
+.action-icon a[href*="instagram"] { 
+    background: linear-gradient(135deg, #e4405f 0%, #f77737 100%);
+    width: 42px !important;
+    height: 42px !important;
+}
+.action-icon a[href*="instagram"]:hover { 
+    background: linear-gradient(135deg, #d63384 0%, #e1306c 100%); 
+}
+
+.action-icon a[href*="x.com"], 
+.action-icon a[href*="twitter"] { 
+    background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%);
+    width: 42px !important;
+    height: 42px !important;
+}
+.action-icon a[href*="x.com"]:hover, 
+.action-icon a[href*="twitter"]:hover { 
+    background: linear-gradient(135deg, #0d8bd9 0%, #1da1f2 100%); 
+}
+
+.action-icon a[href*="discord"] { 
+    background: linear-gradient(135deg, #5865f2 0%, #4752c4 100%);
+    width: 42px !important;
+    height: 42px !important;
+}
+.action-icon a[href*="discord"]:hover { 
+    background: linear-gradient(135deg, #4752c4 0%, #5865f2 100%); 
+}
+
+.action-icon a[href*="tiktok"] { 
+    background: linear-gradient(135deg, #000000 0%, #191919 100%);
+    width: 42px !important;
+    height: 42px !important;
+}
+.action-icon a[href*="tiktok"]:hover { 
+    background: linear-gradient(135deg, #333333 0%, #000000 100%); 
+}
+
+/* Buy Shiz Coin Button - Lower Z-Index and Spacing */
+.button-secondary {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+    border: 2px solid transparent;
+    white-space: nowrap;
+    min-width: 140px;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 9; /* Lower than icons to stay behind if needed */
+    margin-right: 10px; /* Space before hamburger */
+}
+
+.button-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.button-secondary:hover::before {
+    left: 100%;
+}
+
+.button-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+    background: linear-gradient(135deg, #218838 0%, #1ea085 100%);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hamburger Menu */
+.ham-button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    flex-shrink: 0;
+    z-index: 8;
+}
+
+.ham-button:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20px;
+    height: 16px;
+}
+
+.nav-line {
+    width: 100%;
+    height: 2px;
+    background: #333;
+    margin: 2px 0;
+    transition: all 0.3s ease;
+    border-radius: 1px;
+}
+
+/* Responsive Design - Scaled Sizes to Prevent Overlap */
+@media (max-width: 991.98px) {
+    .menu-action {
+        gap: 15px;
+    }
+    
+    .action-icon {
+        gap: 8px;
+    }
+    
+    .action-icon a {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 14px;
+    }
+    
+    /* Explicit responsive sizes for each platform */
+    .action-icon a[href*="reddit"],
+    .action-icon a[href*="instagram"],
+    .action-icon a[href*="x.com"],
+    .action-icon a[href*="twitter"],
+    .action-icon a[href*="discord"],
+    .action-icon a[href*="tiktok"] {
+        width: 38px !important;
+        height: 38px !important;
+    }
+    
+    .button-secondary {
+        padding: 10px 20px;
+        font-size: 13px;
+        min-width: 120px;
+        margin-right: 8px;
+    }
+    
+    .ham-button {
+        display: flex;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .menu-action {
+        gap: 12px;
+    }
+    
+    .action-icon {
+        gap: 6px;
+    }
+    
+    .action-icon a {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 13px;
+    }
+    
+    .action-icon a[href*="reddit"],
+    .action-icon a[href*="instagram"],
+    .action-icon a[href*="x.com"],
+    .action-icon a[href*="twitter"],
+    .action-icon a[href*="discord"],
+    .action-icon a[href*="tiktok"] {
+        width: 36px !important;
+        height: 36px !important;
+    }
+    
+    .button-secondary {
+        padding: 8px 16px;
+        font-size: 12px;
+        min-width: 100px;
+        margin-right: 6px;
+    }
+    
+    .button-secondary .button-text {
+        display: none; /* Icon-only on small mobile */
+    }
+    
+    .button-secondary i {
+        margin-left: 0;
+    }
+    
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .menu-action {
+        gap: 10px;
+    }
+    
+    .action-icon {
+        gap: 5px;
+    }
+    
+    .action-icon a {
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 12px;
+    }
+    
+    .action-icon a[href*="reddit"],
+    .action-icon a[href*="instagram"],
+    .action-icon a[href*="x.com"],
+    .action-icon a[href*="twitter"],
+    .action-icon a[href*="discord"],
+    .action-icon a[href*="tiktok"] {
+        width: 34px !important;
+        height: 34px !important;
+    }
+    
+    .button-secondary {
+        min-width: 80px;
+        padding: 6px 12px;
+        margin-right: 4px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu-action {
+        gap: 25px;
+    }
+    
+    .action-icon {
+        gap: 12px;
+    }
+    
+    .action-icon a {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 17px;
+    }
+    
+    .action-icon a[href*="reddit"],
+    .action-icon a[href*="instagram"],
+    .action-icon a[href*="x.com"],
+    .action-icon a[href*="twitter"],
+    .action-icon a[href*="discord"],
+    .action-icon a[href*="tiktok"] {
+        width: 44px !important;
+        height: 44px !important;
+    }
+    
+    .button-secondary {
+        padding: 14px 28px;
+        font-size: 15px;
+        min-width: 160px;
+        margin-right: 12px;
+    }
+}
+
+/* Ensure Navbar Layout Doesn't Compress Elements */
+.navbar-collapse {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-nav {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+        width: 100%;
+    }
+    
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+        margin-right: auto;
+    }
+    
+    .menu-action {
+        margin-left: auto;
+        gap: 20px;
+    }
+}
+
+/* Override Any Existing Styles That Might Cause Issues */
+.action-icon a * {
+    box-sizing: border-box !important;
+    line-height: 1 !important;
+}
+
+/* Fix for Font Awesome Icons Specifically */
+.fa-brands {
+    width: inherit !important;
+    height: inherit !important;
+    line-height: inherit !important;
+}
