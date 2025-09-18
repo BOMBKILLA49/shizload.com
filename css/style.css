@@ -212,7 +212,7 @@ a {
 
 /* BUTTONS */
 .btn-default {
-  border-width: 1px;
+  border-width: 5px;
   border-style: solid;
   border-radius: 0px;
   padding: 12px 25px;
