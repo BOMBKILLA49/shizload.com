@@ -10796,38 +10796,39 @@ p {
     transform: scale(1.02);
 }
 
-/* Menu Action Area */
-/* Menu Action Area - Fixed Spacing */
+/* Menu Action Area - Fixed Spacing and Z-Index */
 .menu-action {
     display: flex;
     align-items: center;
-    gap: 20px; /* Add gap between all elements in the menu-action */
+    gap: 25px; /* Increased gap to prevent overlap */
     position: relative;
     flex-wrap: nowrap; /* Prevent wrapping */
+    z-index: 10; /* Ensure menu-action is above other elements */
 }
 
-/* Social Icons - Fixed Positioning */
+/* Social Icons - Narrower and Positioned Correctly */
 .action-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px; /* Space between individual icons */
-    margin-right: 0; /* Remove margin - use flex gap instead */
+    gap: 10px; /* Reduced gap between icons for narrower layout */
     padding: 10px 0;
     flex-shrink: 0; /* Prevent shrinking */
+    z-index: 11; /* Ensure icons are above button */
+    order: 1; /* Explicitly set order before button */
 }
 
 .action-icon a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    width: 36px; /* Narrower: reduced from 50px to 36px */
+    height: 36px; /* Narrower: reduced from 50px to 36px */
+    border-radius: 50%; /* Perfect circle */
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px; /* Smaller: reduced from 20px to 14px */
     line-height: 1;
     transition: all 0.3s ease;
     position: relative;
@@ -10878,9 +10879,11 @@ p {
     100% { transform: translateY(-2px) scale(1.1); }
 }
 
-/* Specific icon colors */
+/* Specific icon colors - Ensure consistent size */
 .action-icon a[href*="reddit"] { 
     background: linear-gradient(135deg, #ff4500 0%, #ff6347 100%); 
+    width: 36px;
+    height: 36px;
 }
 .action-icon a[href*="reddit"]:hover { 
     background: linear-gradient(135deg, #e63900 0%, #ff4500 100%); 
@@ -10888,6 +10891,8 @@ p {
 
 .action-icon a[href*="instagram"] { 
     background: linear-gradient(135deg, #e4405f 0%, #f77737 100%);
+    width: 36px;
+    height: 36px;
 }
 .action-icon a[href*="instagram"]:hover { 
     background: linear-gradient(135deg, #d63384 0%, #e1306c 100%); 
@@ -10896,6 +10901,8 @@ p {
 .action-icon a[href*="x.com"], 
 .action-icon a[href*="twitter"] { 
     background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%);
+    width: 36px;
+    height: 36px;
 }
 .action-icon a[href*="x.com"]:hover, 
 .action-icon a[href*="twitter"]:hover { 
@@ -10904,6 +10911,8 @@ p {
 
 .action-icon a[href*="discord"] { 
     background: linear-gradient(135deg, #5865f2 0%, #4752c4 100%);
+    width: 36px;
+    height: 36px;
 }
 .action-icon a[href*="discord"]:hover { 
     background: linear-gradient(135deg, #4752c4 0%, #5865f2 100%); 
@@ -10911,6 +10920,8 @@ p {
 
 .action-icon a[href*="tiktok"] { 
     background: linear-gradient(135deg, #000000 0%, #191919 100%);
+    width: 36px;
+    height: 36px;
 }
 .action-icon a[href*="tiktok"]:hover { 
     background: linear-gradient(135deg, #333333 0%, #000000 100%); 
@@ -10935,10 +10946,10 @@ p {
     white-space: nowrap;
     min-width: 140px;
     justify-content: center;
-    flex-shrink: 0; /* Prevent button from shrinking */
-    margin-right: 15px; /* Space between button and hamburger */
+    flex-shrink: 0;
+    order: 2; /* Ensure button comes after icons */
+    z-index: 10; /* Below icons but above other elements */
 }
-
 .button-secondary::before {
     content: '';
     position: absolute;
@@ -11046,38 +11057,10 @@ p {
     transform: translateY(-50%) scale(1.1);
 }
 
-/* Responsive Design - Fixed Spacing */
+/* Responsive Design - Narrower Icons */
 @media (max-width: 991.98px) {
     .menu-action {
-        gap: 15px; /* Reduced gap on tablet */
-    }
-    
-    .action-icon {
-        gap: 10px;
-        flex-shrink: 0;
-    }
-    
-    .action-icon a {
-        width: 36px;
-        height: 36px;
-        font-size: 14px;
-    }
-    
-    .button-secondary {
-        padding: 10px 20px;
-        font-size: 13px;
-        min-width: 120px;
-        margin-right: 10px;
-    }
-    
-    .ham-button {
-        display: flex;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .menu-action {
-        gap: 12px;
+        gap: 20px;
     }
     
     .action-icon {
@@ -11085,16 +11068,62 @@ p {
     }
     
     .action-icon a {
+        width: 34px; /* Narrower */
+        height: 34px; /* Narrower */
+        font-size: 13px; /* Smaller */
+    }
+    
+    .action-icon a[href*="reddit"],
+    .action-icon a[href*="instagram"],
+    .action-icon a[href*="x.com"],
+    .action-icon a[href*="twitter"],
+    .action-icon a[href*="discord"],
+    .action-icon a[href*="tiktok"] {
         width: 34px;
         height: 34px;
+    }
+    
+    .button-secondary {
+        padding: 10px 20px;
         font-size: 13px;
+        min-width: 120px;
+    }
+    
+    .ham-button {
+        display: flex;
+        order: 3; /* Ensure hamburger is last */
+    }
+}
+
+@media (max-width: 767.98px) {
+    .menu-action {
+        gap: 15px;
+    }
+    
+    .action-icon {
+        gap: 6px;
+    }
+    
+    .action-icon a {
+        width: 32px; /* Narrower */
+        height: 32px; /* Narrower */
+        font-size: 12px; /* Smaller */
+    }
+    
+    .action-icon a[href*="reddit"],
+    .action-icon a[href*="instagram"],
+    .action-icon a[href*="x.com"],
+    .action-icon a[href*="twitter"],
+    .action-icon a[href*="discord"],
+    .action-icon a[href*="tiktok"] {
+        width: 32px;
+        height: 32px;
     }
     
     .button-secondary {
         padding: 8px 16px;
         font-size: 12px;
         min-width: 100px;
-        margin-right: 8px;
     }
     
     .button-secondary .button-text {
@@ -11112,23 +11141,64 @@ p {
 
 @media (max-width: 575.98px) {
     .menu-action {
-        gap: 10px;
+        gap: 12px;
     }
     
     .action-icon {
-        gap: 6px;
+        gap: 5px;
     }
     
     .action-icon a {
-        width: 32px;
-        height: 32px;
-        font-size: 12px;
+        width: 30px; /* Narrowest */
+        height: 30px; /* Narrowest */
+        font-size: 11px; /* Smallest */
+    }
+    
+    .action-icon a[href*="reddit"],
+    .action-icon a[href*="instagram"],
+    .action-icon a[href*="x.com"],
+    .action-icon a[href*="twitter"],
+    .action-icon a[href*="discord"],
+    .action-icon a[href*="tiktok"] {
+        width: 30px;
+        height: 30px;
     }
     
     .button-secondary {
         min-width: 80px;
         padding: 6px 12px;
-        margin-right: 5px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu-action {
+        gap: 30px;
+    }
+    
+    .action-icon {
+        gap: 12px;
+    }
+    
+    .action-icon a {
+        width: 40px; /* Slightly larger but still narrow */
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .action-icon a[href*="reddit"],
+    .action-icon a[href*="instagram"],
+    .action-icon a[href*="x.com"],
+    .action-icon a[href*="twitter"],
+    .action-icon a[href*="discord"],
+    .action-icon a[href*="tiktok"] {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .button-secondary {
+        padding: 14px 28px;
+        font-size: 15px;
+        min-width: 160px;
     }
 }
 
