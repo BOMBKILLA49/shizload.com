@@ -10821,13 +10821,13 @@ p {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1;
     transition: all 0.3s ease;
     position: relative;
@@ -11058,9 +11058,9 @@ p {
     }
     
     .action-icon a {
-        width: 44px;
-        height: 44px;
-        font-size: 18px;
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
     }
     
     .button-secondary {
@@ -11085,9 +11085,9 @@ p {
     }
     
     .action-icon a {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
     }
     
     .button-secondary {
@@ -11120,9 +11120,9 @@ p {
     }
     
     .action-icon a {
-        width: 38px;
-        height: 38px;
-        font-size: 14px;
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
     }
     
     .button-secondary {
