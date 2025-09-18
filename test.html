@@ -1,22 +1,21 @@
 <html lang="en"><div id="in-page-channel-node-id" data-channel-name="in_page_channel_nfXW6h"></div><head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="keywords" content="HTML5 Template, comics, ebook, comic art, anime, comic book, SEO">
-	<meta name="description" content="Comixo - Comic Books &amp; Art Studio HTML5 Template">
-	<title>Comixo - Comic Books &amp; Art Studio HTML5 Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="HTML5 Template, comics, ebook, comic art, anime, comic book, SEO">
+    <meta name="description" content="Comixo - Comic Books & Art Studio HTML5 Template">
+    <title>Comixo - Comic Books & Art Studio HTML5 Template</title>
 
-	<!--font-awesome icons link-->
-	<link rel="stylesheet" href="css/all.min.css">
+<!--font-awesome icons link-->
+<link rel="stylesheet" href="css/all.min.css">
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/slick.css">
-	<link rel="stylesheet" href="css/venobox.min.css">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/slick.css">
+<link rel="stylesheet" href="css/venobox.min.css">
 
-	<!--main style file-->
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/responsive.css">
-<style>@keyframes slide-in-one-tap {
+<!--main style file-->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css"><style>@keyframes slide-in-one-tap {
   from {
     transform: translateY(80px);
   }
@@ -172,6 +171,33 @@
     color: #fff;
   }
 
+/* --- Checkmarks slider (scroll box) styles --- */
+.check-slider .check-slide{
+  display:grid;
+  gap:10px;
+  padding:14px 8px;
+}
+.check-slider p{
+  margin:0;
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  font-weight:500;
+}
+.check-slider p i{
+  margin-top:2px;
+  flex:0 0 auto;
+  color:#00c853; /* uses your theme green; optional */
+}
+/* optional: contain dots/arrows nicely in About section */
+.about-txt .slick-dots{
+  margin-top:10px;
+}
+.about-txt .slick-prev:before,
+.about-txt .slick-next:before{
+  color:#222;
+}
+
 @font-face {
   font-family: 'Binance';
   src: url(chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/fonts/BinancePlex-Regular.otf) format('opentype');
@@ -193,633 +219,653 @@
   font-style: normal;
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL2FwcC9zcmMvb25lVGFwL3N0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0lBQ0UsMkJBQTJCO0VBQzdCO0VBQ0E7SUFDRSwwQkFBMEI7RUFDNUI7QUFDRjs7QUFFQTtFQUNFLFVBQVU7QUFDWjs7QUFHRTtJQUNFLGFBQWE7RUFDZjs7QUFFQTtJQUNFLGdCQUFnQjtFQUNsQjs7QUFFQTtJQUNFLHNCQUFzQjtFQUN4Qjs7QUFFQTtJQUNFLGtCQUFrQjtFQUNwQjs7QUFFQTtJQUNFLGFBQWE7RUFDZjs7QUFFQTtJQUNFLHNCQUFzQjtFQUN4Qjs7QUFFQTtJQUNFLG1CQUFtQjtFQUNyQjs7QUFFQTtJQUNFLDhCQUE4QjtFQUNoQzs7QUFFQTtJQUNFLHVCQUF1QjtFQUN6Qjs7QUFFQTtJQUNFLFdBQVc7RUFDYjs7QUFFQTtJQUNFLGdEQUFnRDtJQUNoRCw0REFBNEQ7SUFDNUQsWUFBWTtJQUNaLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsK0NBQStDO0lBQy9DLGVBQWU7SUFDZixXQUFXO0lBQ1gsWUFBWTtJQUNaLGFBQWE7RUFDZjs7QUFFQTtJQUNFLFNBQVM7SUFDVCxnQ0FBZ0M7SUFDaEMsa0JBQWtCO0VBdUJwQjs7QUFyQkU7TUFDRSxTQUFTO0lBQ1g7O0FBRUE7TUFDRSxjQUFjO01BQ2QsZUFBZTtNQUNmLGdCQUFnQjtNQUNoQixpQkFBaUI7SUFDbkI7O0FBRUE7TUFDRSxjQUFjO01BQ2QsZUFBZTtNQUNmLGlCQUFpQjtJQUNuQjs7QUFFQTtNQUNFLGNBQWM7TUFDZCxlQUFlO0lBQ2pCOztBQUdGO0lBQ0UsaUJBQWlCO0lBQ2pCLFNBQVM7RUFtQlg7O0FBakJFO01BQ0UsU0FBUztNQUNULFdBQVc7SUFjYjs7QUFaRTtRQUNFLGNBQWM7UUFDZCxlQUFlO1FBQ2YsZ0JBQWdCO1FBQ2hCLGlCQUFpQjtNQUNuQjs7QUFFQTtRQUNFLGNBQWM7UUFDZCxlQUFlO1FBQ2YsaUJBQWlCO01BQ25COztBQUlKO0lBQ0UsU0FBUztJQUNULGNBQWM7RUFLaEI7O0FBSEU7TUFDRSxjQUFjO0lBQ2hCOztBQUdGO0lBQ0UsV0FBVztFQUNiOztBQUVBO0lBQ0UsbUJBQW1CO0lBQ25CLDhCQUE4QjtJQUM5QixtQkFBbUI7SUFDbkIsZ0NBQWdDO0lBQ2hDLGdDQUFnQztJQUNoQyxlQUFlO0lBQ2Ysa0JBQWtCO0lBQ2xCLFlBQVk7RUFRZDs7QUFORTtNQUNFLFdBQVc7TUFDWCxlQUFlO01BQ2YsZ0JBQWdCO01BQ2hCLGlCQUFpQjtJQUNuQjs7QUFHRjtJQUNFLGlCQUFpQjtFQUNuQjs7QUFFQTtJQUNFLFdBQVc7RUFDYjs7QUFHRjtFQUNFLHNCQUFzQjtFQUN0QiwrREFBMEU7RUFDMUUsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QiwrREFBeUU7RUFDekUsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QiwrREFBMkU7RUFDM0UsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQiIsInNvdXJjZXNDb250ZW50IjpbIkBrZXlmcmFtZXMgc2xpZGUtaW4tb25lLXRhcCB7XG4gIGZyb20ge1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSg4MHB4KTtcbiAgfVxuICB0byB7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDBweCk7XG4gIH1cbn1cblxuLnRydXN0LWhpZGUtZ3JhY2VmdWxseSB7XG4gIG9wYWNpdHk6IDA7XG59XG5cbi50cnVzdC13YWxsZXQtb25lLXRhcCB7XG4gIC5oaWRkZW4ge1xuICAgIGRpc3BsYXk6IG5vbmU7XG4gIH1cblxuICAuc2VtaWJvbGQge1xuICAgIGZvbnQtd2VpZ2h0OiA1MDA7XG4gIH1cblxuICAuYmluYW5jZS1wbGV4IHtcbiAgICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICB9XG5cbiAgLnJvdW5kZWQtZnVsbCB7XG4gICAgYm9yZGVyLXJhZGl1czogNTAlO1xuICB9XG5cbiAgLmZsZXgge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gIH1cblxuICAuZmxleC1jb2wge1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIH1cblxuICAuaXRlbXMtY2VudGVyIHtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB9XG5cbiAgLnNwYWNlLWJldHdlZW4ge1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgfVxuXG4gIC5qdXN0aWZ5LWNlbnRlciB7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIH1cblxuICAudy1mdWxsIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxuXG4gIC5ib3gge1xuICAgIHRyYW5zaXRpb246IGFsbCAwLjVzIGN1YmljLWJlemllcigwLCAwLCAwLCAxLjQzKTtcbiAgICBhbmltYXRpb246IHNsaWRlLWluLW9uZS10YXAgMC41cyBjdWJpYy1iZXppZXIoMCwgMCwgMCwgMS40Myk7XG4gICAgd2lkdGg6IDM4NHB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDE1cHg7XG4gICAgYmFja2dyb3VuZDogI2ZmZjtcbiAgICBib3gtc2hhZG93OiAwcHggMnB4IDRweCAwcHggcmdiYSgwLCAwLCAwLCAwLjI1KTtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgcmlnaHQ6IDMwcHg7XG4gICAgYm90dG9tOiAzMHB4O1xuICAgIHotaW5kZXg6IDEwMjA7XG4gIH1cblxuICAuaGVhZGVyIHtcbiAgICBnYXA6IDE1cHg7XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNlNmU2ZTY7XG4gICAgcGFkZGluZzogMTBweCAxOHB4O1xuXG4gICAgLmxlZnQtaXRlbXMge1xuICAgICAgZ2FwOiAxNXB4O1xuICAgIH1cblxuICAgIC50aXRsZSB7XG4gICAgICBjb2xvcjogIzFlMjMyOTtcbiAgICAgIGZvbnQtc2l6ZTogMThweDtcbiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICBsaW5lLWhlaWdodDogMjhweDtcbiAgICB9XG5cbiAgICAuc3VidGl0bGUge1xuICAgICAgY29sb3I6ICM0NzRkNTc7XG4gICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICBsaW5lLWhlaWdodDogMjBweDtcbiAgICB9XG5cbiAgICAuY2xvc2Uge1xuICAgICAgY29sb3I6ICMxZTIzMjk7XG4gICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgfVxuICB9XG5cbiAgLmJvZHkge1xuICAgIHBhZGRpbmc6IDlweCAxOHB4O1xuICAgIGdhcDogMTBweDtcblxuICAgIC5yaWdodC1pdGVtcyB7XG4gICAgICBnYXA6IDEwcHg7XG4gICAgICB3aWR0aDogMTAwJTtcblxuICAgICAgLndhbGxldC10aXRsZSB7XG4gICAgICAgIGNvbG9yOiAjMWUyMzI5O1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiAyMHB4O1xuICAgICAgfVxuXG4gICAgICAud2FsbGV0LXN1YnRpdGxlIHtcbiAgICAgICAgY29sb3I6ICM0NzRkNTc7XG4gICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDIwcHg7XG4gICAgICB9XG4gICAgfVxuICB9XG5cbiAgLmNvbm5lY3QtaW5kaWNhdG9yIHtcbiAgICBnYXA6IDE1cHg7XG4gICAgcGFkZGluZzogOHB4IDA7XG5cbiAgICAuZmxvdy1pY29uIHtcbiAgICAgIGNvbG9yOiAjNDc0ZDU3O1xuICAgIH1cbiAgfVxuXG4gIC5sb2FkaW5nLWNvbG9yIHtcbiAgICBjb2xvcjogI2ZmZjtcbiAgfVxuXG4gIC5idXR0b24ge1xuICAgIGJvcmRlci1yYWRpdXM6IDUwcHg7XG4gICAgb3V0bGluZTogMnB4IHNvbGlkIHRyYW5zcGFyZW50O1xuICAgIG91dGxpbmUtb2Zmc2V0OiAycHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDUsIDAsIDI1NSk7XG4gICAgYm9yZGVyLWNvbG9yOiByZ2IoMjI5LCAyMzEsIDIzNSk7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBoZWlnaHQ6IDQ1cHg7XG5cbiAgICAuYnV0dG9uLXRleHQge1xuICAgICAgY29sb3I6ICNmZmY7XG4gICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgbGluZS1oZWlnaHQ6IDIwcHg7XG4gICAgfVxuICB9XG5cbiAgLmZvb3RlciB7XG4gICAgbWFyZ2luOiAyMHB4IDMwcHg7XG4gIH1cblxuICAuY2hlY2staWNvbiB7XG4gICAgY29sb3I6ICNmZmY7XG4gIH1cbn1cblxuQGZvbnQtZmFjZSB7XG4gIGZvbnQtZmFtaWx5OiAnQmluYW5jZSc7XG4gIHNyYzogdXJsKCcuL2ZvbnRzL2JpbmFuY2VQbGV4L0JpbmFuY2VQbGV4LVJlZ3VsYXIub3RmJykgZm9ybWF0KCdvcGVudHlwZScpO1xuICBmb250LXdlaWdodDogNDAwO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG59XG5cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICBzcmM6IHVybCgnLi9mb250cy9iaW5hbmNlUGxleC9CaW5hbmNlUGxleC1NZWRpdW0ub3RmJykgZm9ybWF0KCdvcGVudHlwZScpO1xuICBmb250LXdlaWdodDogNTAwO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG59XG5cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICBzcmM6IHVybCgnLi9mb250cy9iaW5hbmNlUGxleC9CaW5hbmNlUGxleC1TZW1pQm9sZC5vdGYnKSBmb3JtYXQoJ29wZW50eXBlJyk7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style></head>
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL2FwcC9zcmMvb25lVGFwL3N0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0lBQ0UsMkJBQTJCO0VBQzdCO0VBQ0E7SUFDRSwwQkFBMEI7RUFDNUI7QUFDRjs7QUFFQTtFQUNFLFVBQVU7QUFDWjs7QUFHRTtJQUNFLGFBQWE7RUFDZjs7QUFFQTtJQUNFLGdCQUFnQjtFQUNsQjs7QUFFQTtJQUNFLHNCQUFzQjtFQUN4Qjs7QUFFQTtJQUNFLGtCQUFrQjtFQUNwQjs7QUFFQTtJQUNFLGFBQWE7RUFDZjs7QUFFQTtJQUNFLHNCQUFzQjtFQUN4Qjs7QUFFQTtJQUNFLG1CQUFtQjtFQUNyQjs7QUFFQTtJQUNFLDhCQUE4QjtFQUNoQzs7QUFFQTtJQUNFLHVCQUF1QjtFQUN6Qjs7QUFFQTtJQUNFLFdBQVc7RUFDYjs7QUFFQTtJQUNFLGdEQUFnRDtJQUNoRCw0REFBNEQ7SUFDNUQsWUFBWTtJQUNaLG1CQUFtQjtJQUNuQixnQkFBZ0I7SUFDaEIsK0NBQStDO0lBQy9DLGVBQWU7SUFDZixXQUFXO0lBQ1gsWUFBWTtJQUNaLGFBQWE7RUFDZjs7QUFFQTtJQUNFLFNBQVM7SUFDVCxnQ0FBZ0M7SUFDaEMsa0JBQWtCO0VBdUJwQjs7QUFyQkU7TUFDRSxTQUFTO0lBQ1g7O0FBRUE7TUFDRSxjQUFjO01BQ2QsZUFBZTtNQUNmLGdCQUFnQjtNQUNoQixpQkFBaUI7SUFDbkI7O0FBRUE7TUFDRSxjQUFjO01BQ2QsZUFBZTtNQUNmLGlCQUFpQjtJQUNuQjs7QUFFQTtNQUNFLGNBQWM7TUFDZCxlQUFlO0lBQ2pCOztBQUdGO0lBQ0UsaUJBQWlCO0lBQ2pCLFNBQVM7RUFtQlg7O0FBakJFO01BQ0UsU0FBUztNQUNULFdBQVc7SUFjYjs7QUFaRTtRQUNFLGNBQWM7UUFDZCxlQUFlO1FBQ2YsZ0JBQWdCO1FBQ2hCLGlCQUFpQjtNQUNuQjs7QUFFQTtRQUNFLGNBQWM7UUFDZCxlQUFlO1FBQ2YsaUJBQWlCO01BQ25COztBQUlKO0lBQ0UsU0FBUztJQUNULGNBQWM7RUFLaEI7O0FBSEU7TUFDRSxjQUFjO0lBQ2hCOztBQUdGO0lBQ0UsV0FBVztFQUNiOztBQUVBO0lBQ0UsbUJBQW1CO0lBQ25CLDhCQUE4QjtJQUM5QixtQkFBbUI7SUFDbkIsZ0NBQWdDO0lBQ2hDLGdDQUFnQztJQUNoQyxlQUFlO0lBQ2Ysa0JBQWtCO0lBQ2xCLFlBQVk7RUFRZDs7QUFOREtFTjtlQUVWO0lBQ0UsY0FBYztJQUNkLG9CQUFvQjtFQUN0Qjs7QUFHRjtJQUNFLGlCQUFpQjtFQUNuQjs7QUFFQTtJQUNFLFdBQVc7RUFDYjs7QUFHRjtFQUNFLHNCQUFzQjtFQUN0QiwrREFBMEU7RUFDMUUsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QiwrREFBeUU7RUFDekUsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QiwrREFBMkU7RUFDM0UsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtBQUNwQiIsInNvdXJjZXNDb250ZW50IjpbIkBrZXlmcmFtZXMgc2xpZGUtaW4tb25lLXRhcCB7XG4gIGZyb20ge1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSg4MHB4KTtcbiAgfVxuICB0byB7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDBweCk7XG4gIH1cbn1cblxuLnRydXN0LWhpZGUtZ3JhY2VmdWxseSB7XG4gIG9wYWNpdHk6IDA7XG59XG5cbi50cnVzdC13YWxsZXQtb25lLXRhcCB7XG4gIC5oaWRkZW4ge1xuICAgIGRpc3BsYXk6IG5vbmU7XG4gIH1cblxuICAuc2VtaWJvbGQge1xuICAgIGZvbnQtd2VpZ2h0OiA1MDA7XG4gIH1cblxuICAuYmluYW5jZS1wbGV4IHtcbiAgICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICB9XG5cbiAgLnJvdW5kZWQtZnVsbCB7XG4gICAgYm9yZGVyLXJhZGl1czogNTAlO1xuICB9XG5cbiAgLmZsZXgge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gIH1cblxuICAuZmxleC1jb2wge1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIH1cblxuICAuaXRlbXMtY2VudGVyIHtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB9XG5cbiAgLnNwYWNlLWJldHdlZW4ge1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgfVxuXG4gIC5qdXN0aWZ5LWNlbnRlciB7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIH1cblxuICAudy1mdWxsIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgfVxuXG4gIC5ib3gge1xuICAgIHRyYW5zaXRpb246IGFsbCAwLjVzIGN1YmljLWJlemllcigwLCAwLCAwLCAxLjQzKTtcbiAgICBhbmltYXRpb246IHNsaWRlLWluLW9uZS10YXAgMC41cyBjdWJpYy1iZXppZXIoMCwgMCwgMCwgMS40Myk7XG4gICAgd2lkdGg6IDM4NHB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDE1cHg7XG4gICAgYmFja2dyb3VuZDogI2ZmZjtcbiAgICBib3gtc2hhZG93OiAwcHggMnB4IDRweCAwcHggcmdiYSgwLCAwLCAwLCAwLjI1KTtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgcmlnaHQ6IDMwcHg7XG4gICAgYm90dG9tOiAzMHB4O1xuICAgIHotaW5kZXg6IDEwMjA7XG4gIH1cblxuICAuaGVhZGVyIHtcbiAgICBnYXA6IDE1cHg7XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNlNmU2ZTY7XG4gICAgcGFkZGluZzogMTBweCAxOHB4O1xuXG4gICAgLmxlZnQtaXRlbXMge1xuICAgICAgZ2FwOiAxNXB4O1xuICAgIH1cblxuICAgIC50aXRsZSB7XG4gICAgICBjb2xvcjogIzFlMjMyOTtcbiAgICAgIGZvbnQtc2l6ZTogMThweDtcbiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICBsaW5lLWhlaWdodDogMjhweDtcbiAgICB9XG5cbiAgICAuc3VidGl0bGUge1xuICAgICAgY29sb3I6ICM0NzRkNTc7XG4gICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICBsaW5lLWhlaWdodDogMjBweDtcbiAgICB9XG5cbiAgICAuY2xvc2Uge1xuICAgICAgY29sb3I6ICMxZTIzMjk7XG4gICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgfVxuICB9XG5cbiAgLmJvZHkge1xuICAgIHBhZGRpbmc6IDlweCAxOHB4O1xuICAgIGdhcDogMTBweDtcblxuICAgIC5yaWdodC1pdGVtcyB7XG4gICAgICBnYXA6IDEwcHg7XG4gICAgICB3aWR0aDogMTAwJTtcblxuICAgICAgLndhbGxldC10aXRsZSB7XG4gICAgICAgIGNvbG9yOiAjMWUyMzI5O1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiAyMHB4O1xuICAgICAgfVxuXG4gICAgICAud2FsbGV0LXN1YnRpdGxlIHtcbiAgICAgICAgY29sb3I6ICM0NzRkNTc7XG4gICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDIwcHg7XG4gICAgICB9XG4gICAgfVxuICB9XG5cbiAgLmNvbm5lY3QtaW5kaWNhdG9yIHtcbiAgICBnYXA6IDE1cHg7XG4gICAgcGFkZGluZzogOHB4IDA7XG5cbiAgICAuZmxvdy1pY29uIHtcbiAgICAgIGNvbG9yOiAjNDc0ZDU3O1xuICAgIH1cbiAgfVxuXG4gIC5sb2FkaW5nLWNvbG9yIHtcbiAgICBjb2xvcjogI2ZmZjtcbiAgfVxuXG4gIC5idXR0b24ge1xuICAgIGJvcmRlci1yYWRpdXM6IDUwcHg7XG4gICAgb3V0bGluZTogMnB4IHNvbGlkIHRyYW5zcGFyZW50O1xuICAgIG91dGxpbmUtb2Zmc2V0OiAycHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDUsIDAsIDI1NSk7XG4gICAgYm9yZGVyLWNvbG9yOiByZ2IoMjI5LCAyMzEsIDIzNSk7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBoZWlnaHQ6IDQ1cHg7XG5cbiAgICAuYnV0dG9uLXRleHQge1xuICAgICAgY29sb3I6ICNmZmY7XG4gICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgbGluZS1oZWlnaHQ6IDIwcHg7XG4gICAgfVxuICB9XG5cbiAgLmZvb3RlciB7XG4gICAgbWFyZ2luOiAyMHB4IDMwcHg7XG4gIH1cblxuICAuY2hlY2staWNvbiB7XG4gICAgY29sb3I6ICNmZmY7XG4gIH1cbn1cblxuQGZvbnQtZmFjZSB7XG4gIGZvbnQtZmFtaWx5OiAnQmluYW5jZSc7XG4gIHNyYzogdXJsKCcuL2ZvbnRzL2JpbmFuY2VQbGV4L0JpbmFuY2VQbGV4LVJlZ3VsYXIub3RmJykgZm9ybWF0KCdvcGVudHlwZScpO1xuICBmb250LXdlaWdodDogNDAwO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG59XG5cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICBzcmM6IHVybCgnLi9mb250cy9iaW5hbmNlUGxleC9CaW5hbmNlUGxleC1NZWRpdW0ub3RmJykgZm9ybWF0KCdvcGVudHlwZScpO1xuICBmb250LXdlaWdodDogNTAwO1xuICBmb250LXN0eWxlOiBub3JtYWw7XG59XG5cbkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ0JpbmFuY2UnO1xuICBzcmM6IHVybCgnLi9mb250cy9iaW5hbmNlUGxleC9CaW5hbmNlUGxleS1TZW1pQm9sZC5vdGYnKSBmb3JtYXQoJ29wZW50eXBlJyk7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style></head>
 
 <body>
-	<!-- perloader -->
-	<div id="preloader" style="display: none;">
-		<div id="loading-center">
-			<div id="loading-center-absolute">
-				<div class="object" id="object_one"></div>
-				<div class="object" id="object_two"></div>
-				<div class="object" id="object_three"></div>
-				<div class="object" id="object_four"></div>
-			</div>
-		</div>
-	</div>
-	<!-- preloader -->
+    <!-- perloader -->
+    <div id="preloader" style="display: none;">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object" id="object_one"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_three"></div>
+                <div class="object" id="object_four"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader -->
 
-	<!-- HEADER AREA START -->
-	<nav class="navbar navbar-expand-lg navbar-light sticky-top">
-		<div class="container">
-			<a class="navbar-brand" href="/demos/">Shizload<span>.com</span></a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav m-auto mb-2 mt-0 mb-lg-0">
-					<li class="nav-item">
-						<a class="nav-link" href="#banner">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#about">About</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#new-comics">Comics</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#blog">Blog</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" data-bs-toggle="modal" data-bs-target="#contact-modal">Contact</a>
-					</li>
-				</ul>
-				<div class="menu-action d-flex">
-					<div class="action-icon">
-						<br>
-				<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-				<a href="#"><i class="fa-brands fa-twitter"></i></a>
-				<a href="#"><i class="fa-brands fa-twitch"></i></a>
-				<a href="#"><i class="fa-brands fa-youtube"></i></a>
-					</div>
-					<a href="#" class="button-secondary">Free Comics</a>
-					<a href="#" class="ham-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-						<div class="hamburger-menu">
-							<div class="nav-line"></div>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	</nav>
-	<!-- right-menu modal -->
-	<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-		<div class="offcanvas-header">
-			<h5 class="offcanvas-title" id="offcanvasRightLabel">Quick Menu</h5>
-			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-		</div>
-		<div class="offcanvas-body side-menu">
-			<form>
-				<input type="text" class="form-control" placeholder="Search by Comic Name">
-				<button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-			</form>
-			<div class="row">
-				<div class="col-lg-6 menu-comic">
-					<a href="/demos/comic_details"><img src="images/comic1.png" alt="comic" class="img-fluid"></a>
-				</div>
-				<div class="col-lg-6 menu-comic">
-					<a href="/demos/comic_details"><img src="images/popular1.png" alt="comic" class="img-fluid"></a>
-				</div>
-				<div class="col-lg-6 menu-comic">
-					<a href="/demos/comic_details"><img src="images/popular2.png" alt="comic" class="img-fluid"></a>
-				</div>
-				<div class="col-lg-6 menu-comic">
-					<a href="/demos/comic_details"><img src="images/comic3.png" alt="comic" class="img-fluid"></a>
-				</div>
-			</div>
-			<div class="row pt-5">
-				<div class="col-lg-12 text-center">
-					<a href="#" class="button-primary">Browse All</a>
-				</div>
-			</div>
-			<div class="social-media mobile-v-hide text-center">
-				<p>Follow Us</p>
-				<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-				<a href="#"><i class="fa-brands fa-twitter"></i></a>
-				<a href="#"><i class="fa-brands fa-twitch"></i></a>
-				<a href="#"><i class="fa-brands fa-youtube"></i></a>
-			</div>
-		</div>
-	</div>
-	<!-- contact modal -->
-	<div class="modal fade" id="contact-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-xl">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<form>
-					<div class="modal-body">
-						<div class="row">
-							<div class="col-lg-7">
-								<div class="row">
-									<div class="col-lg-6">
-										<input type="text" class="form-control" placeholder="Your Name">
-									</div>
-									<div class="col-lg-6">
-										<input type="email" class="form-control" placeholder="Your Email">
-									</div>
-									<div class="col-lg-6">
-										<input type="text" class="form-control" placeholder="Your Phone">
-									</div>
-									<div class="col-lg-6">
-										<input type="text" class="form-control" placeholder="Subject">
-									</div>
-									<div class="col-lg-12">
-										<textarea class="form-control" placeholder="Write Your Comment Here..." rows="3"></textarea>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-5">
-								<div class="contact-item">
-									<p>A wild journey through a cryptocurrency comic takes you on a roadmap to a $hizload, packed with valuable crypto information & smart tips to navigate through the blockchain jungle.</p>
-									<div class="row">
-										<div class="col-6 col-lg-6 contact-info">
-											<i class="fa-solid fa-location-dot"></i>
-											<h3>Address:</h3>
-											<p>Dhanmondi Road No. 32, Dhaka.</p>
-										</div>
-										<div class="col-6 col-lg-6 contact-info">
-											<i class="fa-solid fa-phone"></i>
-											<h3>Phone:</h3>
-											<p>+(123) 450 336 789</p>
-										</div>
-										<div class="col-6 col-lg-6 contact-info mb-0">
-											<i class="fa-solid fa-envelope"></i>
-											<h3>Email:</h3>
-											<p>comixo@mail.com</p>
-										</div>
-										<div class="col-6 col-lg-6 contact-info mb-0">
-											<i class="fa-solid fa-wifi"></i>
-											<h3>Connect:</h3>
-											<div class="social">
-												<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-												<a href="#"><i class="fa-brands fa-twitter"></i></a>
-												<a href="#"><i class="fa-brands fa-twitch"></i></a>
-												<a href="#"><i class="fa-brands fa-youtube"></i></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="submit" class="button-primary">Send Message</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	<!-- HEADER AREA ENDS -->
+<!-- HEADER AREA START -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="/demos/">Shizload<span>.com</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mt-0 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#banner">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#new-comics">Comics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#contact-modal">Contact</a>
+                </li>
+            </ul>
+            <div class="menu-action d-flex">
+                <div class="action-icon">
+                    
 
-	<!-- BANNER AREA START -->
-	<section id="banner">
-		<div id="backtotop" style="display: none; background: conic-gradient(rgb(215, 21, 21) 0%, rgb(255, 255, 255) 0%);">
-			<a href="#banner" id="backtotop-value"><i class="fa-solid fa-arrow-up"></i></a>
-		</div>
-		<div class="container zindex">
-			<div class="row">
-				<div class="col-lg-6 banner-txt">
-					<span>The Ultimate</span>
-					<h3>Crypto</h3>
-					<h3 class="txt-pos">Comic</h3>
-					<a href="#" class="button-primary">Read Now</a>
-					<a class="venobox button-circular vbox-item" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=kmh1cr3b4Js"><i class="fa-solid fa-play"></i></a>
-					<div class="row banner-review">
-						<div class="col-lg-3">
-							<img src="images/user5.png" alt="user" class="one">
-							<img src="images/user1.png" alt="user">
-							<img src="images/user2.png" alt="user">
-						</div>
-						<div class="col-lg-4">
-							<div class="stars">
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star"></i>
-								<i class="fa-solid fa-star-half-stroke"></i>
-							</div>
-							<p>(73.6K Reviews)</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-10 col-sm-11 col-md-7 col-lg-6 banner-images">
-					<img src="images/banner-icon.png" alt="banner-icon" class="banner-icon">
-					<img src="images/banner2.png" alt="banner-img" class="banner-img one img-fluid">
-					<img src="images/banner1.png" alt="banner-img" class="banner-img two img-fluid">
-				</div>
-			</div>
-		</div>
-		<div class="marquee">
-			<span class="marquee-1">
-				<span class="text">Comic eBook<img src="images/star.png" alt="star"></span>
-				<span class="text">Crypto Roadmap<img src="images/star.png" alt="star"></span>
-				<span class="text">Comic Arts<img src="images/star.png" alt="star"></span>
-				<span class="text">Comic eBook<img src="images/star.png" alt="star"></span>
-				<span class="text">Crypto Roadmap<img src="images/star.png" alt="star"></span>
-				<span class="text">Comic Arts<img src="images/star.png" alt="star"></span>
-				<span class="marquee-2">
-					<span class="text">Comic eBook<img src="images/star.png" alt="star"></span>
-					<span class="text">Crypto Roadmap<img src="images/star.png" alt="star"></span>
-					<span class="text">Comic Arts<img src="images/star.png" alt="star"></span>
-					<span class="text">Comic eBook<img src="images/star.png" alt="star"></span>
-					<span class="text">Crypto Roadmap<img src="images/star.png" alt="star"></span>
-					<span class="text">Comic Arts<img src="images/star.png" alt="star"></span>
-				</span>
-			</span>
-		</div>
-	</section>
-	<!-- BANNER AREA ENDS -->
-
-    <!-- ABOUT AREA START -->
-    <section id="about">
-        <div class="container">
-            <div class="row pt-5">
-                <div class="col-lg-5 col-md-9 m-md-auto about-main">
-                    <img src="images/about-main.png" alt="about-img" class="img-fluid">
-                    <div class="active-users">
-                        <h3 class="counter" data-counterup-time="2000" data-counterup-delay="30" data-counterup-beginat="1">3</h3><span>M</span>
-                        <p>Visits</p>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-twitch"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <a href="#" class="button-secondary">Free Comics</a>
+                <a href="#" class="ham-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <div class="hamburger-menu">
+                        <div class="nav-line"></div>
                     </div>
-                    <div class="experience">
-                        <h3 class="counter" data-counterup-time="2000" data-counterup-delay="30" data-counterup-beginat="2">25</h3>
-                        <span>+</span>
-                        <p>Years of trading experience</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- right-menu modal -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Quick Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body side-menu">
+        <form>
+            <input type="text" class="form-control" placeholder="Search by Comic Name">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <div class="row">
+            <div class="col-lg-6 menu-comic">
+                <a href="/demos/comic_details"><img src="images/comic1.png" alt="comic" class="img-fluid"></a>
+            </div>
+            <div class="col-lg-6 menu-comic">
+                <a href="/demos/comic_details"><img src="images/popular1.png" alt="comic" class="img-fluid"></a>
+            </div>
+            <div class="col-lg-6 menu-comic">
+                <a href="/demos/comic_details"><img src="images/popular2.png" alt="comic" class="img-fluid"></a>
+            </div>
+            <div class="col-lg-6 menu-comic">
+                <a href="/demos/comic_details"><img src="images/comic3.png" alt="comic" class="img-fluid"></a>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-lg-12 text-center">
+                <a href="#" class="button-primary">Browse All</a>
+            </div>
+        </div>
+        <div class="social-media mobile-v-hide text-center">
+            <p>Follow Us</p>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-twitch"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div>
+</div>
+<!-- contact modal -->
+<div class="modal fade" id="contact-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type="text" class="form-control" placeholder="Your Name">
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="email" class="form-control" placeholder="Your Email">
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="text" class="form-control" placeholder="Your Phone">
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="text" class="form-control" placeholder="Subject">
+                                </div>
+                                <div class="col-lg-12">
+                                    <textarea class="form-control" placeholder="Write Your Comment Here..." rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="contact-item">
+                                <p>A wild journey through a cryptocurrency comic takes you on a roadmap to a $hizload, packed with valuable crypto information & smart tips to navigate through the blockchain jungle.</p>
+                                <div class="row">
+                                    <div class="col-6 col-lg-6 contact-info">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <h3>Address:</h3>
+                                        <p>Dhanmondi Road No. 32, Dhaka.</p>
+                                    </div>
+                                    <div class="col-6 col-lg-6 contact-info">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <h3>Phone:</h3>
+                                        <p>+(123) 450 336 789</p>
+                                    </div>
+                                    <div class="col-6 col-lg-6 contact-info mb-0">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <h3>Email:</h3>
+                                        <p>comixo@mail.com</p>
+                                    </div>
+                                    <div class="col-6 col-lg-6 contact-info mb-0">
+                                        <i class="fa-solid fa-wifi"></i>
+                                        <h3>Connect:</h3>
+                                        <div class="social">
+                                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                            <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="about-txt">
-                        <span>About Us</span>
-                        <h3>Digital Roadmap to a Shizload</h3>
-                        <p class="pt-2 pb-4">A wild journey through a cryptocurrency comic takes you on a roadmap to a $hizload, packed with valuable crypto information & smart tips to navigate through the blockchain jungle.</p>
-                        <div class="check-p">
-                            <p><i class="fa-solid fa-check"></i> We Offer Unique Comic Books &amp; Arts</p>
-                            <p><i class="fa-solid fa-check"></i> Get Collection Of Creative Series</p>
-                            <p><i class="fa-solid fa-check"></i> Watch Cartoon And Kid Animation</p>
-                            <!-- Additional roadmap items -->
-                            <p><i class="fa-solid fa-check"></i> Learn Blockchain Fundamentals</p>
-                            <p><i class="fa-solid fa-check"></i> Master Crypto Trading Strategies</p>
-                            <p><i class="fa-solid fa-check"></i> Understand DeFi Protocols</p>
-                            <p><i class="fa-solid fa-check"></i> Explore NFT Marketplaces</p>
-                            <p><i class="fa-solid fa-check"></i> Secure Your Digital Assets</p>
-                            <p><i class="fa-solid fa-check"></i> Join Crypto Communities</p>
-                            <p><i class="fa-solid fa-check"></i> Stay Updated on Market Trends</p>
+                <div class="modal-footer">
+                    <button type="submit" class="button-primary">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- HEADER AREA ENDS -->
+
+<!-- BANNER AREA START -->
+<section id="banner">
+    <div id="backtotop" style="display: none; background: conic-gradient(rgb(215, 21, 21) 0%, rgb(255, 255, 255) 0%);">
+        <a href="#banner" id="backtotop-value"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+    <div class="container zindex">
+        <div class="row">
+            <div class="col-lg-6 banner-txt">
+                <span>The Ultimate</span>
+                <h3>Crypto</h3>
+                <h3 class="txt-pos">Comic</h3>
+                <a href="#" class="button-primary">Read Now</a>
+                <a class="venobox button-circular vbox-item" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=kmh1cr3b4Js"><i class="fa-solid fa-play"></i></a>
+                <div class="row banner-review">
+                    <div class="col-lg-3">
+                        <img src="images/user5.png" alt="user" class="one">
+                        <img src="images/user1.png" alt="user">
+                        <img src="images/user2.png" alt="user">
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
                         </div>
-                        <a class="button-circular vbox-item" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=4S8RC5zzG5g"><i class="fa-solid fa-play"></i> Watch Story</a>
+                        <p>(73.6K Reviews)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-11 col-md-7 col-lg-6 banner-images">
+                <img src="images/banner-icon.png" alt="banner-icon" class="banner-icon">
+                <img src="images/banner2.png" alt="banner-img" class="banner-img one img-fluid">
+                <img src="images/banner1.png" alt="banner-img" class="banner-img two img-fluid">
+            </div>
+        </div>
+    </div>
+    <div class="marquee">
+        <span class="marquee-1">
+            <span class="text">Comic eBook<img src="images/star.png" alt="star"></span>
+            <span class="text">Crypto Roadmap<img src="images/star.png" alt="star"></span>
+            <span class="text">Comic Arts<img src="images/star.png" alt="star"></span>
+            <span class="text">Comic eBook<img src="images/star.png" alt="star"></span>
+            <span class="text">Crypto Roadmap<img src="images/star.png" alt="star"></span>
+            <span class="text">Comic Arts<img src="images/star.png" alt="star"></span>
+            <span class="marquee-2">
+                <span class="text">Comic eBook<img src="images/star.png" alt="star"></span>
+                <span class="text">Crypto Roadmap<img src="images/star.png" alt="star"></span>
+                <span class="text">Comic Arts<img src="images/star.png" alt="star"></span>
+                <span class="text">Comic eBook<img src="images/star.png" alt="star"></span>
+                <span class="text">Crypto Roadmap<img src="images/star.png" alt="star"></span>
+                <span class="text">Comic Arts<img src="images/star.png" alt="star"></span>
+            </span>
+        </span>
+    </div>
+</section>
+<!-- BANNER AREA ENDS -->
+
+<!-- ABOUT AREA START -->
+<section id="about">
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-lg-5 col-md-9 m-md-auto about-main">
+                <img src="images/about-main.png" alt="about-img" class="img-fluid">
+                <div class="active-users">
+                    <h3 class="counter" data-counterup-time="2000" data-counterup-delay="30" data-counterup-beginat="1">3</h3><span>M</span>
+                    <p>Visits</p>
+                </div>
+                <div class="experience">
+                    <h3 class="counter" data-counterup-time="2000" data-counterup-delay="30" data-counterup-beginat="2">25</h3>
+                    <span>+</span>
+                    <p>Years of trading experience</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-txt">
+                    <span>About Us</span>
+                    <h3>Digital Roadmap to a Shizload</h3>
+                    <p class="pt-2 pb-4">A wild journey through a cryptocurrency comic takes you on a roadmap to a $hizload, packed with valuable crypto information & smart tips to navigate through the blockchain jungle.</p>
+
+                    <!-- START: Checkmarks slider (3 per slide) -->
+                    <div class="check-slider">
+                      <div class="check-slide">
+                        <p><i class="fa-solid fa-check"></i> We Offer Unique Comic Books & Arts</p>
+                        <p><i class="fa-solid fa-check"></i> Get Collection Of Creative Series</p>
+                        <p><i class="fa-solid fa-check"></i> Watch Cartoon And Kid Animation</p>
+                      </div>
+                      <!-- To add more slides later, duplicate this block and add 3 new items:
+                      <div class="check-slide">
+                        <p><i class="fa-solid fa-check"></i> Another benefit 1</p>
+                        <p><i class="fa-solid fa-check"></i> Another benefit 2</p>
+                        <p><i class="fa-solid fa-check"></i> Another benefit 3</p>
+                      </div>
+                      -->
+                    </div>
+                    <!-- END: Checkmarks slider -->
+
+                    <a class="button-circular vbox-item" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=4S8RC5zzG5g"><i class="fa-solid fa-play"></i> Watch Story</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ABOUT AREA ENDS -->
+
+<!-- NEW_COMICS AREA START -->
+<section id="new-comics">
+    <div class="container">
+        <div class="row">
+            <div class="section-title t-white">
+                <div class="row">
+                    <div class="col-lg-6 m-auto text-center">
+                        <span>Utility Comic eBooks</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ABOUT AREA ENDS -->
+        <div class="row comic-item-pos">
+            <div class="col-lg-4 col-md-8 mobile-m-auto">
+                <div class="comic-item">
+                    <img src="images/comic1.png" alt="comic" class="img-fluid">
+                    <a class="veno-img vbox-item" data-gall="comic1" href="images/comic1.png"><i class="fa-solid fa-plus"></i></a>
+                    <div class="comic-item-details">
+                        <div class="row">
+                            <div class="col-8 col-lg-8">
+                                <h3>BTC eBook</h3>
+                                <p><i class="fa-solid fa-eye"></i> 250.6K Views</p>
+                            </div>
+                            <div class="col-4 col-lg-4 text-end">
+                                <a href="/demos/comic_details"><i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-8 mobile-m-auto">
+                <div class="comic-item active">
+                    <img src="images/comic2.png" alt="comic" class="img-fluid">
+                    <a class="veno-img vbox-item" data-gall="comic1" href="images/comic2.png"><i class="fa-solid fa-plus"></i></a>
+                    <div class="comic-item-details">
+                        <div class="row">
+                            <div class="col-8 col-lg-8">
+                                <h3>ETH eBook</h3>
+                                <p><i class="fa-solid fa-eye"></i> 168.2K Views</p>
+                            </div>
+                            <div class="col-4 col-lg-4 text-end">
+                                <a href="/demos/comic_details"><i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-8 mobile-m-auto">
+                <div class="comic-item">
+                    <img src="images/comic3.png" alt="comic" class="img-fluid">
+                    <a class="veno-img vbox-item" data-gall="comic1" href="images/comic3.png"><i class="fa-solid fa-plus"></i></a>
+                    <div class="comic-item-details">
+                        <div class="row">
+                            <div class="col-8 col-lg-8">
+                                <h3>LTC eBook</h3>
+                                <p><i class="fa-solid fa-eye"></i> 89.7K Views</p>
+                            </div>
+                            <div class="col-4 col-lg-4 text-end">
+                                <a href="/demos/comic_details"><i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- NEW_COMICS AREA END -->
 
-	<!-- NEW_COMICS AREA START -->
-	<section id="new-comics">
-		<div class="container">
-			<div class="row">
-				<div class="section-title t-white">
-					<div class="row">
-						<div class="col-lg-6 m-auto text-center">
-							<span>Utility Comic eBooks</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row comic-item-pos">
-				<div class="col-lg-4 col-md-8 mobile-m-auto">
-					<div class="comic-item">
-						<img src="images/comic1.png" alt="comic" class="img-fluid">
-						<a class="veno-img vbox-item" data-gall="comic1" href="images/comic1.png"><i class="fa-solid fa-plus"></i></a>
-						<div class="comic-item-details">
-							<div class="row">
-								<div class="col-8 col-lg-8">
-									<h3>BTC eBook</h3>
-									<p><i class="fa-solid fa-eye"></i> 250.6K Views</p>
-								</div>
-								<div class="col-4 col-lg-4 text-end">
-									<a href="/demos/comic_details"><i class="fa-solid fa-arrow-right"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-8 mobile-m-auto">
-					<div class="comic-item active">
-						<img src="images/comic2.png" alt="comic" class="img-fluid">
-						<a class="veno-img vbox-item" data-gall="comic1" href="images/comic2.png"><i class="fa-solid fa-plus"></i></a>
-						<div class="comic-item-details">
-							<div class="row">
-								<div class="col-8 col-lg-8">
-									<h3>ETH eBook</h3>
-									<p><i class="fa-solid fa-eye"></i> 168.2K Views</p>
-								</div>
-								<div class="col-4 col-lg-4 text-end">
-									<a href="/demos/comic_details"><i class="fa-solid fa-arrow-right"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-8 mobile-m-auto">
-					<div class="comic-item">
-						<img src="images/comic3.png" alt="comic" class="img-fluid">
-						<a class="veno-img vbox-item" data-gall="comic1" href="images/comic3.png"><i class="fa-solid fa-plus"></i></a>
-						<div class="comic-item-details">
-							<div class="row">
-								<div class="col-8 col-lg-8">
-									<h3>LTC eBook</h3>
-									<p><i class="fa-solid fa-eye"></i> 89.7K Views</p>
-								</div>
-								<div class="col-4 col-lg-4 text-end">
-									<a href="/demos/comic_details"><i class="fa-solid fa-arrow-right"></i></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- NEW_COMICS AREA END -->
+<!-- POPULAR AREA START -->
+<section id="popular">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 section-title">
+                <span>Meme Coin Comic eBooks</span>
+                <h3>Explore Our Creativity.</h3>
+                <p>The ultimate meme coin comic eBook's take you on a wild ride through a roadmap packed with tips & educational information on your favorite meme coins.</p>
+                <a href="#" class="button-primary">Browse All</a>
+            </div>
+            <div class="col-lg-6 col-md-9 mobile-m-auto">
+                <div class="popular-item">
+                    <p>2024</p>
+                    <div class="col-lg-10 ms-auto">
+                        <img src="images/popular1.png" alt="comic-book" class="img-fluid">
+                        <a href="/demos/comic_details">Shadow Fighter II</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-9 mobile-m-auto">
+                <div class="popular-item right">
+                    <p>2018</p>
+                    <div class="col-lg-10 me-auto">
+                        <img src="images/popular2.png" alt="comic-book" class="img-fluid">
+                        <a href="/demos/comic_details">Super Hero V</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-9 ms-auto mobile-m-auto">
+                <div class="popular-item">
+                    <p>2017</p>
+                    <div class="col-lg-10 ms-auto">
+                        <img src="images/popular4.png" alt="comic-book" class="img-fluid">
+                        <a href="/demos/comic_details">Power Ranger X</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-9 mobile-m-auto">
+                <div class="popular-item right mb-0">
+                    <p>2016</p>
+                    <div class="col-lg-10 me-auto">
+                        <img src="images/popular3.png" alt="comic-book" class="img-fluid">
+                        <a href="/demos/comic_details">Dr. Stranger</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- POPULAR AREA END -->
 
-	<!-- POPULAR AREA START -->
-	<section id="popular">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 section-title">
-					<span>Meme Coin Comic eBooks</span>
-					<h3>Explore Our Creativity.</h3>
-					<p>The ultimate meme coin comic eBook's take you on a wild ride through a roadmap packed with tips & educational information on your favorite meme coins.</p>
-					<a href="#" class="button-primary">Browse All</a>
-				</div>
-				<div class="col-lg-6 col-md-9 mobile-m-auto">
-					<div class="popular-item">
-						<p>2024</p>
-						<div class="col-lg-10 ms-auto">
-							<img src="images/popular1.png" alt="comic-book" class="img-fluid">
-							<a href="/demos/comic_details">Shadow Fighter II</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-9 mobile-m-auto">
-					<div class="popular-item right">
-						<p>2018</p>
-						<div class="col-lg-10 me-auto">
-							<img src="images/popular2.png" alt="comic-book" class="img-fluid">
-							<a href="/demos/comic_details">Super Hero V</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-9 ms-auto mobile-m-auto">
-					<div class="popular-item">
-						<p>2017</p>
-						<div class="col-lg-10 ms-auto">
-							<img src="images/popular4.png" alt="comic-book" class="img-fluid">
-							<a href="/demos/comic_details">Power Ranger X</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-9 mobile-m-auto">
-					<div class="popular-item right mb-0">
-						<p>2016</p>
-						<div class="col-lg-10 me-auto">
-							<img src="images/popular3.png" alt="comic-book" class="img-fluid">
-							<a href="/demos/comic_details">Dr. Stranger</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- POPULAR AREA END -->
+<!-- TEAM AREA START -->
+<section id="team">
+    <div class="container zindex">
+        <div class="row">
+            <div class="section-title t-white">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <span>Discounts & Free Money</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-55 pb-65">
+            <div class="col-lg-3 col-md-6 team-item text-center">
+                <div class="team-img">
+                    <a href="https://coinbase.com/join/79Q3TVX?src=ios-link"><img src="images/team1.png" alt="team" class="img-fluid"><a/>
+                </div>
+                <a href="https://coinbase.com/join/79Q3TVX?src=ios-link"><h3>Coinbase</h3></a>
+                <p>Get a free $30 in BTC after your first trade of $20 or more.</p>
+                <div class="social">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 team-item text-center">
+                <div class="team-img">
+                    <img src="images/team2.png" alt="team" class="img-fluid">
+                </div>
+                <h3>Ledger</h3>
+                <p>Story Teller & Director</p>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 team-item text-center">
+                <div class="team-img">
+                    <img src="images/team3.png" alt="team" class="img-fluid">
+                </div>
+                <h3>Crypto.com</h3>
+                <p>Sign up here & get up to $50!</p>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 team-item text-center">
+                <div class="team-img">
+                    <img src="images/team4.png" alt="team" class="img-fluid">
+                </div>
+                <h3>Ann Nocenti.</h3>
+                <p>Creative Designer</p>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitch"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row team-counter-main">
+            <div class="col-6 col-lg-3 team-counter">
+                <h3 class="counter" data-counterup-time="2000" data-counterup-delay="30" data-counterup-beginat="10">97</h3><span>%</span>
+                <p>CGC Complete</p>
+            </div>
+            <div class="col-6 col-lg-3 team-counter">
+                <h3 class="counter" data-counterup-time="2000" data-counterup-delay="30" data-counterup-beginat="1">1.0</h3><span>M</span>
+                <p>Web Visits</p>
+            </div>
+            <div class="col-lg-6 team-counter">
+                <p class="pt-16">The buzz around Shizload.com is exploding  & we're charging toward a massive Shizload payout. Join the force & earn a shizload as a community.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- TEAM AREA END -->
 
-	<!-- TEAM AREA START -->
-	<section id="team">
-		<div class="container zindex">
-			<div class="row">
-				<div class="section-title t-white">
-					<div class="row">
-						<div class="col-lg-6">
-							<span>Discounts & Free Money</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row pt-55 pb-65">
-				<div class="col-lg-3 col-md-6 team-item text-center">
-					<div class="team-img">
-						<a href="https://coinbase.com/join/79Q3TVX?src=ios-link"><img src="images/team1.png" alt="team" class="img-fluid"><a/>
-					</div>
-					<a href="https://coinbase.com/join/79Q3TVX?src=ios-link"><h3>Coinbase</h3></a>
-					<p>Get a free $30 in BTC after your first trade of $20 or more.</p>
-					<div class="social">
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 team-item text-center">
-					<div class="team-img">
-						<img src="images/team2.png" alt="team" class="img-fluid">
-					</div>
-					<h3>Ledger</h3>
-					<p>Story Teller &amp; Director</p>
-					<div class="social">
-						<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-						<a href="#"><i class="fa-brands fa-twitter"></i></a>
-						<a href="#"><i class="fa-brands fa-twitch"></i></a>
-						<a href="#"><i class="fa-brands fa-youtube"></i></a>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 team-item text-center">
-					<div class="team-img">
-						<img src="images/team3.png" alt="team" class="img-fluid">
-					</div>
-					<h3>Crypto.com</h3>
-					<p>Sign up here & get up to $50!</p>
-					<div class="social">
-						<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-						<a href="#"><i class="fa-brands fa-twitter"></i></a>
-						<a href="#"><i class="fa-brands fa-twitch"></i></a>
-						<a href="#"><i class="fa-brands fa-youtube"></i></a>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 team-item text-center">
-					<div class="team-img">
-						<img src="images/team4.png" alt="team" class="img-fluid">
-					</div>
-					<h3>Ann Nocenti.</h3>
-					<p>Creative Designer</p>
-					<div class="social">
-						<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-						<a href="#"><i class="fa-brands fa-twitter"></i></a>
-						<a href="#"><i class="fa-brands fa-twitch"></i></a>
-						<a href="#"><i class="fa-brands fa-youtube"></i></a>
-					</div>
-				</div>
-			</div>
-			<div class="row team-counter-main">
-				<div class="col-6 col-lg-3 team-counter">
-					<h3 class="counter" data-counterup-time="2000" data-counterup-delay="30" data-counterup-beginat="10">97</h3><span>%</span>
-					<p>CGC Complete</p>
-				</div>
-				<div class="col-6 col-lg-3 team-counter">
-					<h3 class="counter" data-counterup-time="2000" data-counterup-delay="30" data-counterup-beginat="1">1.0</h3><span>M</span>
-					<p>Web Visits</p>
-				</div>
-				<div class="col-lg-6 team-counter">
-					<p class="pt-16">The buzz around Shizload.com is exploding 🔥 & we're charging toward a massive Shizload payout. Join the force & earn a shizload as a community.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- TEAM AREA END -->
+<!-- BLOG AREA START -->
+<section id="blog">
+    <div class="container zindex">
+        <div class="row">
+            <div class="section-title">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <span>Merch</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-55">
+            <div class="col-lg-12 col-11 blog-item">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <h4>BTC</h4>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="images/blog1.png" alt="blog-img" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blog-txt">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i> 140K</a>
+                            <a href="#"><i class="fa-solid fa-share"></i> 3.5K</a>
+                            <h3>A Shizload of Bitcoin Merchandise.</h3>
+                            <a href="#" class="round-btn"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-11 blog-item no-border">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <h4>LTC</h4>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="images/blog2.png" alt="blog-img" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blog-txt">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i> 243K</a>
+                            <a href="#"><i class="fa-solid fa-share"></i> 6.8K</a>
+                            <h3>A Shizload of Litecoin Merchandise.</h3>
+                            <a href="#" class="round-btn"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-11 blog-item">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <h4>XRP</h4>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="images/blog3.png" alt="blog-img" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blog-txt">
+                            <a href="#"><i class="fa-solid fa-thumbs-up"></i> 153K</a>
+                            <a href="#"><i class="fa-solid fa-share"></i> 7.2K</a>
+                            <h3>A Shizload of Bitcoin Merchandise.</h3>
+                            <a href="#" class="round-btn"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-lg-4 pt-3 m-auto">
+                <a href="#" class="button-primary">Browse More</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- BLOG AREA END -->
 
-	<!-- BLOG AREA START -->
-	<section id="blog">
-		<div class="container zindex">
-			<div class="row">
-				<div class="section-title">
-					<div class="row">
-						<div class="col-lg-6">
-							<span>Merch</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row pt-55">
-				<div class="col-lg-12 col-11 blog-item">
-					<div class="row">
-						<div class="col-lg-2">
-							<h4>BTC</h4>
-						</div>
-						<div class="col-lg-4">
-							<img src="images/blog1.png" alt="blog-img" class="img-fluid">
-						</div>
-						<div class="col-lg-6">
-							<div class="blog-txt">
-								<a href="#"><i class="fa-solid fa-thumbs-up"></i> 140K</a>
-								<a href="#"><i class="fa-solid fa-share"></i> 3.5K</a>
-								<h3>A Shizload of Bitcoin Merchandise.</h3>
-								<a href="#" class="round-btn"><i class="fa-solid fa-arrow-right"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-12 col-11 blog-item no-border">
-					<div class="row">
-						<div class="col-lg-2">
-							<h4>LTC</h4>
-						</div>
-						<div class="col-lg-4">
-							<img src="images/blog2.png" alt="blog-img" class="img-fluid">
-						</div>
-						<div class="col-lg-6">
-							<div class="blog-txt">
-								<a href="#"><i class="fa-solid fa-thumbs-up"></i> 243K</a>
-								<a href="#"><i class="fa-solid fa-share"></i> 6.8K</a>
-								<h3>A Shizload of Litecoin Merchandise.</h3>
-								<a href="#" class="round-btn"><i class="fa-solid fa-arrow-right"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-12 col-11 blog-item">
-					<div class="row">
-						<div class="col-lg-2">
-							<h4>XRP</h4>
-						</div>
-						<div class="col-lg-4">
-							<img src="images/blog3.png" alt="blog-img" class="img-fluid">
-						</div>
-						<div class="col-lg-6">
-							<div class="blog-txt">
-								<a href="#"><i class="fa-solid fa-thumbs-up"></i> 153K</a>
-								<a href="#"><i class="fa-solid fa-share"></i> 7.2K</a>
-								<h3>A Shizload of Bitcoin Merchandise.</h3>
-								<a href="#" class="round-btn"><i class="fa-solid fa-arrow-right"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row pt-5">
-				<div class="col-lg-4 pt-3 m-auto">
-					<a href="#" class="button-primary">Browse More</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- BLOG AREA END -->
+<!-- FOOTER AREA START -->
+<section id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 footer-logo">
+                <a href="/demos/">Shizload<span>.com</span></a>
+                <img src="images/footer-icon.png" alt="bat-img">
+            </div>
+            <div class="col-lg-2 col-md-4 footer-menu">
+                <h3>Related Domains</h3>
+                <a href="#">Shizload.com</a>
+                <a href="#">Shiz-load.com</a>
+                <a href="#">comiccrypto.com</a>
+                <a href="#">comicbookcrypto.com</a>
+                <a href="#">cryptocomicbooks.com</a>
+                <a href="#">comiccryptocurrency.com</a>
+            </div>
+            <div class="col-lg-2 col-md-4 footer-menu">
+                <h3>Community</h3>
+                <a href="#">Affiliate Marketing</a>
+                <a href="#">Supporters</a>
+                <a href="#">Partnership</a>
+                <a href="#">Discord</a>
+            </div>
+            <div class="col-lg-2 col-md-4 footer-menu">
+                <h3>Action Link</h3>
+                <a href="#">Contact Us</a>
+                <a href="#">Payment Types</a>
+                <a href="#">Merch</a>
+            </div>
+            <div class="col-lg-3 footer-action">
+                <h3>Connect Us</h3>
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-reddit"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+                <h3>Get The App</h3>
+                <div class="footer-download">
+                    <a href="#" class="button-primary android"><i class="fa-brands fa-google-play"></i> Play Store</a>
+                    <a href="#" class="button-primary ios"><i class="fa-brands fa-apple"></i> App Store</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FOOTER AREA END -->
 
-	<!-- FOOTER AREA START -->
-	<section id="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 footer-logo">
-					<a href="/demos/">Shizload<span>.com</span></a>
-					<img src="images/footer-icon.png" alt="bat-img">
-				</div>
-				<div class="col-lg-2 col-md-4 footer-menu">
-					<h3>Related Domains</h3>
-					<a href="#">Shizload.com</a>
-					<a href="#">Shiz-load.com</a>
-					<a href="#">comiccrypto.com</a>
-					<a href="#">comicbookcrypto.com</a>
-					<a href="#">cryptocomicbooks.com</a>
-					<a href="#">comiccryptocurrency.com</a>
-				</div>
-				<div class="col-lg-2 col-md-4 footer-menu">
-					<h3>Community</h3>
-				    <a href="#">Affiliate Marketing</a>
-					<a href="#">Supporters</a>
-					<a href="#">Partnership</a>
-					<a href="#">Discord</a>
-				</div>
-				<div class="col-lg-2 col-md-4 footer-menu">
-					<h3>Action Link</h3>
-					<a href="#">Contact Us</a>
-					<a href="#">Payment Types</a>
-					<a href="#">Merch</a>
-				</div>
-				<div class="col-lg-3 footer-action">
-					<h3>Connect Us</h3>
-					<div class="footer-social">
-						<a href="#"><i class="fa-brands fa-reddit"></i></a>
-						<a href="#"><i class="fa-brands fa-instagram"></i></a>
-						<a href="#"><i class="fa-brands fa-twitter"></i></a>
-						<a href="#"><i class="fa-brands fa-youtube"></i></a>
-						<a href="#"><i class="fa-brands fa-tiktok"></i></a>
-					</div>
-					<h3>Get The App</h3>
-					<div class="footer-download">
-						<a href="#" class="button-primary android"><i class="fa-brands fa-google-play"></i> Play Store</a>
-						<a href="#" class="button-primary ios"><i class="fa-brands fa-apple"></i> App Store</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- FOOTER AREA END -->
+<!-- COPY_RIGHT AREA START -->
+<section id="copy_right">
+    <div class="container">
+        <div class="row copyright-txt">
+            <div class="col-lg-6">
+                <span>LANGUAGE: </span>
+                <a href="#">BAN</a>
+                <a href="#">NL</a>
+                <a href="#" class="active">EN</a>
+                <a href="#">FR</a>
+                <a href="#">EU</a>
+            </div>
+            <div class="col-lg-6 text-end">
+                <p>© Made by Shizload.com All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- COPY_RIGHT AREA END -->
 
-	<!-- COPY_RIGHT AREA START -->
-	<section id="copy_right">
-		<div class="container">
-			<div class="row copyright-txt">
-				<div class="col-lg-6">
-					<span>LANGUAGE: </span>
-					<a href="#">BAN</a>
-					<a href="#">NL</a>
-					<a href="#" class="active">EN</a>
-					<a href="#">FR</a>
-					<a href="#">EU</a>
-				</div>
-				<div class="col-lg-6 text-end">
-					<p>© Made by Shizload.com All Rights Reserved.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- COPY_RIGHT AREA END -->
+<!-- JavaScript -->
+<script src="js/jquery-3.6.3.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/venobox.min.js"></script>
+<script src="js/counter.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/custom.js"></script>
 
-	<!-- JavaScript -->
-	<script src="js/jquery-3.6.3.min.js"></script>
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/slick.min.js"></script>
-	<script src="js/venobox.min.js"></script>
-	<script src="js/counter.js"></script>
-	<script src="js/waypoints.min.js"></script>
-	<script src="js/custom.js"></script>
-
-
-
+<!-- INIT: Checkmarks slider -->
+<script>
+  jQuery(function($){
+    // turn the About-section checkmarks into a 3-per-slide slider
+    $('.check-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: true,
+      infinite: false,
+      adaptiveHeight: true,
+      prevArrow: '<button type="button" class="slick-prev" aria-label="Previous">Prev</button>',
+      nextArrow: '<button type="button" class="slick-next" aria-label="Next">Next</button>',
+    });
+  });
+</script>
 </body></html>
