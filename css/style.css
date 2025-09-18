@@ -10804,12 +10804,12 @@ p {
     position: relative;
 }
 
-/* Social Icons - Wider Version */
+/* Social Icons */
 .action-icon {
     display: flex;
     align-items: center;
-    gap: 12px; /* Increased gap between icons */
-    margin-right: 25px; /* Increased space before button */
+    gap: 8px; /* Proper spacing between icons */
+    margin-right: 20px; /* Space before button */
     padding: 8px 0;
 }
 
@@ -10817,13 +10817,13 @@ p {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 48px; /* Increased from 40px to 48px */
-    height: 48px; /* Increased from 40px to 48px */
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     text-decoration: none;
-    font-size: 18px; /* Increased from 16px to 18px */
+    font-size: 16px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -11012,14 +11012,14 @@ p {
     }
     
     .action-icon {
-        gap: 8px; /* Reduced gap on tablet */
-        margin-right: 18px; /* Slightly reduced margin */
+        gap: 6px;
+        margin-right: 15px;
     }
     
     .action-icon a {
-        width: 42px; /* Increased from 35px to 42px */
-        height: 42px; /* Increased from 35px to 42px */
-        font-size: 16px; /* Increased from 14px to 16px */
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
     }
     
     .button-secondary {
@@ -11035,14 +11035,14 @@ p {
 
 @media (max-width: 767.98px) {
     .action-icon {
-        gap: 6px; /* Reduced gap on mobile */
-        margin-right: 12px; /* Reduced margin on mobile */
+        gap: 4px;
+        margin-right: 10px;
     }
     
     .action-icon a {
-        width: 38px; /* Increased from 32px to 38px */
-        height: 38px; /* Increased from 32px to 38px */
-        font-size: 15px; /* Increased from 13px to 15px */
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
     }
     
     .button-secondary {
@@ -11070,12 +11070,12 @@ p {
     }
     
     .action-icon {
-        margin-right: 10px;
+        margin-right: 8px;
     }
     
     .action-icon a {
-        width: 36px; /* Increased from 30px to 36px */
-        height: 36px; /* Increased from 30px to 36px */
+        width: 30px;
+        height: 30px;
     }
     
     .button-secondary {
@@ -11102,41 +11102,5 @@ p {
     
     .navbar-expand-lg .navbar-nav {
         flex-direction: row;
-    }
-}
-
-/* Additional improvements for better spacing */
-@media (min-width: 1200px) {
-    .action-icon {
-        gap: 15px; /* Even more space on large screens */
-        margin-right: 30px;
-    }
-    
-    .action-icon a {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-    }
-    
-    .button-secondary {
-        padding: 14px 28px;
-        font-size: 15px;
-        min-width: 160px;
-    }
-}
-
-/* Ensure proper alignment on all screen sizes */
-.menu-action > * {
-    flex-shrink: 0; /* Prevent shrinking of elements */
-}
-
-/* Fix for very wide screens */
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1320px;
-    }
-    
-    .action-icon {
-        margin-right: 35px;
     }
 }
