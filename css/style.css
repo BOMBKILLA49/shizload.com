@@ -10797,48 +10797,50 @@ p {
 }
 
 /* Menu Action Area */
+/* Menu Action Area - Fixed Spacing */
 .menu-action {
     display: flex;
     align-items: center;
-    gap: 0;
+    gap: 20px; /* Add gap between all elements in the menu-action */
     position: relative;
+    flex-wrap: nowrap; /* Prevent wrapping */
 }
 
-/* Social Icons */
-/* Social Icons - Perfect Round Circles */
+/* Social Icons - Fixed Positioning */
 .action-icon {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center the entire icon group */
-    gap: 15px; /* Increased gap for more breathing room */
-    margin-right: 30px; /* More space before button */
-    padding: 10px 0; /* Consistent vertical padding */
+    justify-content: center;
+    gap: 12px; /* Space between individual icons */
+    margin-right: 0; /* Remove margin - use flex gap instead */
+    padding: 10px 0;
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
 .action-icon a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 50px; /* Fixed width - same as height */
-    height: 50px; /* Fixed height - same as width */
-    border-radius: 50%; /* This creates the circle */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     text-decoration: none;
-    font-size: 20px; /* Larger, consistent font size */
-    line-height: 1; /* Reset line height to prevent vertical stretching */
+    font-size: 20px;
+    line-height: 1;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
     border: 2px solid transparent;
-    flex-shrink: 0; /* Prevent shrinking */
-    text-align: center; /* Center text */
-    box-sizing: border-box; /* Include padding in dimensions */
+    flex-shrink: 0;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .action-icon a i {
-    line-height: 1; /* Ensure icon is perfectly centered */
+    line-height: 1;
     width: 100%;
     height: 100%;
     display: flex;
@@ -10846,7 +10848,6 @@ p {
     justify-content: center;
 }
 
-/* Ensure the icon doesn't overflow */
 .action-icon a::before {
     content: '';
     position: absolute;
@@ -10856,7 +10857,7 @@ p {
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.5s;
-    border-radius: 50%; /* Keep the shine effect circular */
+    border-radius: 50%;
 }
 
 .action-icon a:hover::before {
@@ -10877,11 +10878,9 @@ p {
     100% { transform: translateY(-2px) scale(1.1); }
 }
 
-/* Specific icon colors - all with same dimensions */
+/* Specific icon colors */
 .action-icon a[href*="reddit"] { 
     background: linear-gradient(135deg, #ff4500 0%, #ff6347 100%); 
-    width: 50px;
-    height: 50px;
 }
 .action-icon a[href*="reddit"]:hover { 
     background: linear-gradient(135deg, #e63900 0%, #ff4500 100%); 
@@ -10889,8 +10888,6 @@ p {
 
 .action-icon a[href*="instagram"] { 
     background: linear-gradient(135deg, #e4405f 0%, #f77737 100%);
-    width: 50px;
-    height: 50px;
 }
 .action-icon a[href*="instagram"]:hover { 
     background: linear-gradient(135deg, #d63384 0%, #e1306c 100%); 
@@ -10899,8 +10896,6 @@ p {
 .action-icon a[href*="x.com"], 
 .action-icon a[href*="twitter"] { 
     background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%);
-    width: 50px;
-    height: 50px;
 }
 .action-icon a[href*="x.com"]:hover, 
 .action-icon a[href*="twitter"]:hover { 
@@ -10909,8 +10904,6 @@ p {
 
 .action-icon a[href*="discord"] { 
     background: linear-gradient(135deg, #5865f2 0%, #4752c4 100%);
-    width: 50px;
-    height: 50px;
 }
 .action-icon a[href*="discord"]:hover { 
     background: linear-gradient(135deg, #4752c4 0%, #5865f2 100%); 
@@ -10918,14 +10911,12 @@ p {
 
 .action-icon a[href*="tiktok"] { 
     background: linear-gradient(135deg, #000000 0%, #191919 100%);
-    width: 50px;
-    height: 50px;
 }
 .action-icon a[href*="tiktok"]:hover { 
     background: linear-gradient(135deg, #333333 0%, #000000 100%); 
 }
 
-/* Buy Shiz Coin Button */
+/* Buy Shiz Coin Button - Adjusted */
 .button-secondary {
     display: inline-flex;
     align-items: center;
@@ -10944,6 +10935,8 @@ p {
     white-space: nowrap;
     min-width: 140px;
     justify-content: center;
+    flex-shrink: 0; /* Prevent button from shrinking */
+    margin-right: 15px; /* Space between button and hamburger */
 }
 
 .button-secondary::before {
@@ -11053,39 +11046,28 @@ p {
     transform: translateY(-50%) scale(1.1);
 }
 
-/* Responsive Design */
-/* Responsive Design for Perfect Circles */
+/* Responsive Design - Fixed Spacing */
 @media (max-width: 991.98px) {
     .menu-action {
-        margin-left: auto;
-        gap: 10px;
+        gap: 15px; /* Reduced gap on tablet */
     }
     
     .action-icon {
-        gap: 10px; /* Consistent gap */
-        margin-right: 20px;
+        gap: 10px;
+        flex-shrink: 0;
     }
     
     .action-icon a {
-        width: 44px; /* Even dimensions */
-        height: 44px; /* Even dimensions */
-        font-size: 18px;
-    }
-    
-    .action-icon a[href*="reddit"],
-    .action-icon a[href*="instagram"],
-    .action-icon a[href*="x.com"],
-    .action-icon a[href*="twitter"],
-    .action-icon a[href*="discord"],
-    .action-icon a[href*="tiktok"] {
         width: 44px;
         height: 44px;
+        font-size: 18px;
     }
     
     .button-secondary {
         padding: 10px 20px;
         font-size: 13px;
         min-width: 120px;
+        margin-right: 10px;
     }
     
     .ham-button {
@@ -11094,31 +11076,25 @@ p {
 }
 
 @media (max-width: 767.98px) {
+    .menu-action {
+        gap: 12px;
+    }
+    
     .action-icon {
         gap: 8px;
-        margin-right: 15px;
     }
     
     .action-icon a {
-        width: 40px; /* Perfect square */
-        height: 40px; /* Perfect square */
-        font-size: 16px;
-    }
-    
-    .action-icon a[href*="reddit"],
-    .action-icon a[href*="instagram"],
-    .action-icon a[href*="x.com"],
-    .action-icon a[href*="twitter"],
-    .action-icon a[href*="discord"],
-    .action-icon a[href*="tiktok"] {
         width: 40px;
         height: 40px;
+        font-size: 16px;
     }
     
     .button-secondary {
         padding: 8px 16px;
         font-size: 12px;
         min-width: 100px;
+        margin-right: 8px;
     }
     
     .button-secondary .button-text {
@@ -11136,36 +11112,102 @@ p {
 
 @media (max-width: 575.98px) {
     .menu-action {
-        gap: 8px;
+        gap: 10px;
     }
     
     .action-icon {
         gap: 6px;
-        margin-right: 12px;
     }
     
     .action-icon a {
-        width: 38px; /* Perfect square */
-        height: 38px; /* Perfect square */
-    }
-    
-    .action-icon a[href*="reddit"],
-    .action-icon a[href*="instagram"],
-    .action-icon a[href*="x.com"],
-    .action-icon a[href*="twitter"],
-    .action-icon a[href*="discord"],
-    .action-icon a[href*="tiktok"] {
         width: 38px;
         height: 38px;
-    }
-    
-    .action-icon a i {
-        font-size: 14px; /* Smaller icons on mobile */
+        font-size: 14px;
     }
     
     .button-secondary {
-        min-width: 90px;
+        min-width: 80px;
         padding: 6px 12px;
+        margin-right: 5px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .menu-action {
+        gap: 25px; /* More space on large screens */
+    }
+    
+    .action-icon {
+        gap: 15px;
+    }
+    
+    .action-icon a {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+    }
+    
+    .button-secondary {
+        padding: 14px 28px;
+        font-size: 15px;
+        min-width: 160px;
+        margin-right: 20px;
+    }
+}
+
+/* Ensure navbar has enough space */
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.navbar-collapse {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-nav {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* Fix for desktop - ensure proper spacing */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+        width: 100%;
+    }
+    
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+        margin-right: auto;
+    }
+    
+    .menu-action {
+        margin-left: auto; /* Push to the right */
+        gap: 20px;
+    }
+}
+
+/* Prevent overlap on very narrow screens */
+@media (max-width: 1200px) and (min-width: 992px) {
+    .menu-action {
+        gap: 15px;
+    }
+    
+    .action-icon {
+        gap: 10px;
+    }
+    
+    .button-secondary {
+        min-width: 130px;
+        padding: 10px 20px;
     }
 }
 
