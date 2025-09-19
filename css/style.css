@@ -1890,18 +1890,21 @@ p {
 .copyright-txt a.active {
 	color: #fff;
 }
-<style>
-  .navbar { transition: background-color .2s ease, box-shadow .2s ease; }
-  .navbar.scrolled {
-    background-color: #fff !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,.06);
-    z-index: 1030;
-  }
-</style>
+/* White sticky header */
+.navbar.sticky-top{
+  background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.06);
+  z-index:1030; /* above content, below offcanvas/modal */
+}
 
-<script>
-  window.addEventListener('scroll', () => {
-    const nav = document.querySelector('.navbar');
-    nav.classList.toggle('scrolled', window.scrollY > 10);
-  });
-</script>
+/* Keep text readable on white */
+.navbar.sticky-top .nav-link,
+.navbar.sticky-top .navbar-brand{
+  color:#111;
+}
+
+/* optional: nicer hover */
+.navbar.sticky-top .nav-link:hover{ color:#0d6efd; }
+
+/* smooth changes */
+.navbar{ transition: background-color .2s ease, box-shadow .2s ease; }
