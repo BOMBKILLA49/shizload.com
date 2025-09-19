@@ -912,17 +912,7 @@
 		padding: 12px 60px 18px 0;
 	}
 }
-<style>
-  .navbar.sticky-top {
-    background-color: #fff !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,.06);
-    z-index: 1030; /* sit above content */
-  }
-
-  /* optional: ensure links stay readable on white */
-  .navbar.sticky-top .nav-link,
-  .navbar.sticky-top .navbar-brand { color: #111 !important; }
-
-  /* smooth visual change if you later animate it */
-  .navbar { transition: background-color .2s ease, box-shadow .2s ease; }
-</style>
+@media (max-width: 991.98px){
+  .navbar.sticky-top{ padding:.5rem 0; }
+  .navbar.sticky-top .nav-link{ padding:.5rem 1rem; }
+}
