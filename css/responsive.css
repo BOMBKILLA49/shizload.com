@@ -913,17 +913,16 @@
 	}
 }
 <style>
-  .navbar { transition: background-color .2s ease, box-shadow .2s ease; }
-  .navbar.scrolled {
+  .navbar.sticky-top {
     background-color: #fff !important;
     box-shadow: 0 2px 8px rgba(0,0,0,.06);
-    z-index: 1030;
+    z-index: 1030; /* sit above content */
   }
-</style>
 
-<script>
-  window.addEventListener('scroll', () => {
-    const nav = document.querySelector('.navbar');
-    nav.classList.toggle('scrolled', window.scrollY > 10);
-  });
-</script>
+  /* optional: ensure links stay readable on white */
+  .navbar.sticky-top .nav-link,
+  .navbar.sticky-top .navbar-brand { color: #111 !important; }
+
+  /* smooth visual change if you later animate it */
+  .navbar { transition: background-color .2s ease, box-shadow .2s ease; }
+</style>
