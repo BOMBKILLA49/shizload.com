@@ -155,7 +155,7 @@
         .roadmap-list {
             list-style: none;
             padding: 0;
-            margin: 20px 0;
+            margin: 20px 40px; /* Added side margin for arrows */
         }
         .roadmap-list li {
             font-size: 18px;
@@ -167,9 +167,15 @@
             margin-right: 10px;
         }
         .check-p-navigation {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
             display: flex;
             justify-content: space-between;
-            margin-top: 20px;
+            transform: translateY(-50%);
+            padding: 0 10px;
+            box-sizing: border-box;
         }
         .check-p-nav {
             background: none;
@@ -476,23 +482,23 @@
                 <li><i class="fa-solid fa-check"></i> Understand DeFi Protocols</li>
             </ul>
         </div>
-    </div>
 
-    <!-- Navigation Arrows -->
-    <div class="check-p-navigation">
-        <button class="check-p-nav prev" onclick="changeSlide(-1)">
-            <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button class="check-p-nav next" onclick="changeSlide(1)">
-            <i class="fa-solid fa-chevron-right"></i>
-        </button>
-    </div>
+        <!-- Navigation Arrows -->
+        <div class="check-p-navigation">
+            <button class="check-p-nav prev" onclick="changeSlide(-1)">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="check-p-nav next" onclick="changeSlide(1)">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
 
-    <!-- Dots Navigation -->
-    <div class="check-p-dots">
-        <span class="check-p-dot active" onclick="goToSlide(0)"></span>
-        <span class="check-p-dot" onclick="goToSlide(1)"></span>
-        <span class="check-p-dot" onclick="goToSlide(2)"></span>
+        <!-- Dots Navigation -->
+        <div class="check-p-dots">
+            <span class="check-p-dot active" onclick="goToSlide(0)"></span>
+            <span class="check-p-dot" onclick="goToSlide(1)"></span>
+            <span class="check-p-dot" onclick="goToSlide(2)"></span>
+        </div>
     </div>
 
     <!-- NEW_COMICS AREA START -->
