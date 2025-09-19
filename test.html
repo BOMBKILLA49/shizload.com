@@ -135,6 +135,68 @@
             font-weight: 600;
             font-style: normal;
         }
+
+        /* Added styles for roadmap section */
+        .check-p-container {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .check-p-slide {
+            display: none;
+        }
+        .check-p-slide.active {
+            display: block;
+        }
+        .roadmap-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .roadmap-list li {
+            font-size: 18px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        .roadmap-list li i {
+            color: green;
+            margin-right: 10px;
+        }
+        .check-p-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .check-p-nav {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #007bff;
+        }
+        .check-p-nav:hover {
+            color: #0056b3;
+        }
+        .check-p-dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .check-p-dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: #ddd;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .check-p-dot.active {
+            background: #007bff;
+        }
     </style>
 </head>
 
@@ -387,44 +449,32 @@
         <h1 class="text-center">Roadmap</h1>
         <!-- Slide 1 -->
         <div class="check-p-slide active" id="slide-0">
-            <div class="check-p-item">
-                <h3 class="text-center">Phase 1</h3>
-                <p class="text-center"><i class="fa-solid fa-check"></i> Custom Website & Social Handle Domains</p>
-            </div>
-            <div class="check-p-item">
-                <p class="text-center"><i class="fa-solid fa-check"></i> Secure Online Presence & Build Utility</p>
-            </div>
-            <div class="check-p-item">
-                <p class="text-center"><i class="fa-solid fa-check"></i> Blockchain & Contract Development</p>
-            </div>
+            <h3 class="text-center">Phase 1</h3>
+            <ul class="roadmap-list">
+                <li><i class="fa-solid fa-check"></i> Custom Website & Social Handle Domains</li>
+                <li><i class="fa-solid fa-check"></i> Secure Online Presence & Build Utility</li>
+                <li><i class="fa-solid fa-check"></i> Blockchain & Contract Development</li>
+            </ul>
         </div>
         
         <!-- Slide 2 -->
         <div class="check-p-slide" id="slide-1">
-            <div class="check-p-item">
-                <h3 class="text-center">Phase 2</h3>
-                <p class="text-center"><i class="fa-solid fa-check"></i> Blockchain & Contract Development</p>
-            </div>
-            <div class="check-p-item">
-                <p class="text-center"><i class="fa-solid fa-check"></i> Master Crypto Trading Strategies</p>
-            </div>
-            <div class="check-p-item">
-                <p class="text-center"><i class="fa-solid fa-check"></i> Understand DeFi Protocols</p>
-            </div>
+            <h3 class="text-center">Phase 2</h3>
+            <ul class="roadmap-list">
+                <li><i class="fa-solid fa-check"></i> Blockchain & Contract Development</li>
+                <li><i class="fa-solid fa-check"></i> Master Crypto Trading Strategies</li>
+                <li><i class="fa-solid fa-check"></i> Understand DeFi Protocols</li>
+            </ul>
         </div>
         
         <!-- Slide 3 -->
         <div class="check-p-slide" id="slide-2">
-            <div class="check-p-item">
-                <h3 class="text-center">Phase 3</h3>
-                <p class="text-center"><i class="fa-solid fa-check"></i> Blockchain & Contract Development</p>
-            </div>
-            <div class="check-p-item">
-                <p class="text-center"><i class="fa-solid fa-check"></i> Master Crypto Trading Strategies</p>
-            </div>
-            <div class="check-p-item">
-                <p class="text-center"><i class="fa-solid fa-check"></i> Understand DeFi Protocols</p>
-            </div>
+            <h3 class="text-center">Phase 3</h3>
+            <ul class="roadmap-list">
+                <li><i class="fa-solid fa-check"></i> Blockchain & Contract Development</li>
+                <li><i class="fa-solid fa-check"></i> Master Crypto Trading Strategies</li>
+                <li><i class="fa-solid fa-check"></i> Understand DeFi Protocols</li>
+            </ul>
         </div>
     </div>
 
