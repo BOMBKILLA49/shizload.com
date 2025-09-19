@@ -212,15 +212,17 @@
             .roadmap-list {
                 display: flex;
                 flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
+                flex-wrap: nowrap;
+                overflow-x: auto;
                 margin: 20px 0;
+                padding-bottom: 10px; /* Space for scrollbar */
             }
             .roadmap-list li {
                 font-size: 16px;
                 margin: 10px 15px;
-                text-align: left;
-                flex: 1 0 45%;
+                text-align: center;
+                flex: 0 0 250px; /* Wider fixed width for each item */
+                white-space: normal; /* Allow text to wrap */
             }
             .check-p-navigation {
                 position: relative;
