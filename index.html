@@ -31,10 +31,34 @@
     <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.min.css" />
     <link rel="stylesheet" href="assets/vendors/owl-carousel/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/vendors/owl-carousel/assets/owl.theme.default.min.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/ogency.css" />
+
+    <style>
+        /* Ensure br always creates a break */
+        .main-slider__one-item__content h2 br {
+            display: block !important;
+            content: "" !important;
+            height: 1em !important; /* Adjustable vertical space; increase for more gap */
+            margin: 0.5em 0 !important;
+        }
+        
+        /* Prevent nowrap on slider h2 for mobile */
+        @media (max-width: 767px) {
+            .main-slider__one-item__content h2 {
+                white-space: normal !important;
+                line-height: 1.2 !important; /* Tighter for better stacking */
+                word-wrap: break-word !important;
+            }
+            
+            /* Optional: Scale font slightly for mobile fit */
+            .main-slider__one-item__content h2 {
+                font-size: 3rem !important; /* Adjust based on your design; original might be larger */
+            }
+        }
+    </style>
 </head>
 
 <body class="custom-cursor">
@@ -59,26 +83,27 @@
                         <ul class="main-menu__list">
                             <li class="dropdown megamenu">
                                 <a href="index.html">Home</a>
+                            </li>
                             <li class="dropdown">
                                 <a href="services.html">Services</a>
                                 <ul>
                                     <li><a href="1on1-classes.html">1-on-1 Classes</a></li>
                                     <li><a href="ebook.html">eBook</a></li>
                                     <li><a href="turnkey.html">Turn-Key</a></li>
-                                    </ul>
-                                   </li>
-                                   <li class="dropdown">
-                                    <a href="projects.html">Portfolio</a>
-                                   </li>
-                                   <li class="dropdown">
-                                    <a href="about.html">About</a>
-                                   </li>
-                                   <li class="dropdown">
-                                    <a href="contact.html">Contact</a>
-                                  </li>
-                               </ul>
-                            </div>
-                         <!-- /.main-menu__nav -->
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="projects.html">Portfolio</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="about.html">About</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.main-menu__nav -->
                     <div class="main-menu__right">
                         <a href="#" class="main-menu__toggler mobile-nav__toggler">
                             <i class="fa fa-bars"></i>
@@ -95,17 +120,17 @@
         <!--Main Slider Start-->
         <section class="main-slider">
             <div class="main-slider__one ogency-owl__carousel owl-carousel" data-owl-options='{
-		"loop": true,
-		"animateOut": "fadeOut",
-		"animateIn": "fadeIn",
-		"items": 1,
-		"autoplay": 6000,
-		"autoplayTimeout": 7000,
-		"smartSpeed": 500,
-		"nav": false,
-		"dots": false,
-		"margin": 0
-	    }'>
+        "loop": true,
+        "animateOut": "fadeOut",
+        "animateIn": "fadeIn",
+        "items": 1,
+        "autoplay": 6000,
+        "autoplayTimeout": 7000,
+        "smartSpeed": 500,
+        "nav": false,
+        "dots": false,
+        "margin": 0
+        }'>
                 <div class="item">
                     <!-- slider item start -->
                     <div class="main-slider__one-item">
@@ -240,7 +265,7 @@
                     <div class="client-carousel__one__item">
                         <img src="assets/images/resources/brand-1-3.png" alt="ogency">
                     </div><!-- /.owl-slide-item-->
-					<div class="client-carousel__one__item">
+                    <div class="client-carousel__one__item">
                         <img src="assets/images/resources/brand-1-4.png" alt="ogency">
                     </div><!-- /.owl-slide-item-->
                     <div class="client-carousel__one__item">
@@ -322,12 +347,12 @@
                                 <h5 class="section-title__tagline section-title__tagline--has-dots">about the agency</h5>
                                 <h2 class="section-title__title">We deliver engaging online experiences for your business.</h2>
                             </div>
-							<!-- section-title -->
+                            <!-- section-title -->
                             <p class="about-one__content__text-one">At Shizload.com, we're a dedicated operation, passionate 
-				    about providing valuable web development information, creating stunning websites & offering 1-on-1 classes 
-					to educate you about a our free HTML web development strategy that delivers a high-quality website everytime. 
-					Our personalized approach, attention to detail, and commitment to your brand’s success ensure top-notch results 
-					tailored to your unique needs.</p>
+                    about providing valuable web development information, creating stunning websites & offering 1-on-1 classes 
+                    to educate you about a our free HTML web development strategy that delivers a high-quality website everytime. 
+                    Our personalized approach, attention to detail, and commitment to your brand’s success ensure top-notch results 
+                    tailored to your unique needs.</p>
                             <a href="about.html" class="ogency-btn">Discover More</a>
                         </div><!-- about content end-->
                     </div>
@@ -372,14 +397,14 @@
                                             <li><span class="fa fa-check"></span>Setting Up GitHub and Domain Accounts</li>
                                             <li><span class="fa fa-check"></span>Guidance on Purchasing Your Domain Name (Domain Cost Not Included)</li>
                                             <li><span class="fa fa-check"></span>Creating and Managing a GitHub Repository</li>
-											<li><span class="fa fa-check"></span>Adding and Organizing Files & Folders in GitHub</li>
-											<li><span class="fa fa-check"></span>Customizing Images, Files, and Website Content</li>
-											<li><span class="fa fa-check"></span>Configuring Secure SSL for Your Website (GitHub Pages HTTPS)</li>
-											<li><span class="fa fa-check"></span>Learning HTML and Basic CSS Fundamentals</li>
-											<li><span class="fa fa-check"></span>Deploying Your Website Using GitHub Pages</li>
-											<li><span class="fa fa-check"></span>Basic SEO and Accessibility Best Practices</li>
-											<li><span class="fa fa-check"></span>Post-Class Support for Basic Website Updates</li>
-											<li><span class="fa fa-check"></span>Fully Functional, Custom Website by Class End</li>
+                                            <li><span class="fa fa-check"></span>Adding and Organizing Files & Folders in GitHub</li>
+                                            <li><span class="fa fa-check"></span>Customizing Images, Files, and Website Content</li>
+                                            <li><span class="fa fa-check"></span>Configuring Secure SSL for Your Website (GitHub Pages HTTPS)</li>
+                                            <li><span class="fa fa-check"></span>Learning HTML and Basic CSS Fundamentals</li>
+                                            <li><span class="fa fa-check"></span>Deploying Your Website Using GitHub Pages</li>
+                                            <li><span class="fa fa-check"></span>Basic SEO and Accessibility Best Practices</li>
+                                            <li><span class="fa fa-check"></span>Post-Class Support for Basic Website Updates</li>
+                                            <li><span class="fa fa-check"></span>Fully Functional, Custom Website by Class End</li>
                                         </ul>
                                         <!--pricing-item-list-->
                                         <a href="contact.html" class="ogency-btn">Start Class</a>
@@ -408,15 +433,15 @@
                                             <li><span class="fa fa-check"></span>Why This Method is Better Than Squarespace or Wix</li>
                                             <li><span class="fa fa-check"></span>Setting Up Required Accounts</li>
                                             <li><span class="fa fa-check"></span>Pointing Your Domain to GitHub Pages</li>
-											<li><span class="fa fa-check"></span>Securing Your Domain with SSL</li>
+                                            <li><span class="fa fa-check"></span>Securing Your Domain with SSL</li>
                                             <li><span class="fa fa-check"></span>HTML and CSS Fundamentals</li>
                                             <li><span class="fa fa-check"></span>Creating and Managing a GitHub Repository</li>
                                             <li><span class="fa fa-check"></span>Adding Files and Folders to Your Repository</li>
-											<li><span class="fa fa-check"></span>Customizing Website Content</li>
+                                            <li><span class="fa fa-check"></span>Customizing Website Content</li>
                                             <li><span class="fa fa-check"></span>Deploying Your Repository on GitHub Pages</li>
                                             <li><span class="fa fa-check"></span>Cloning a Website and Pushing Content Using a Terminal</li>
                                             <li><span class="fa fa-check"></span>Enhancing Your Website</li>
-											<li><span class="fa fa-check"></span>Maintaining and Updating Your Website</li>
+                                            <li><span class="fa fa-check"></span>Maintaining and Updating Your Website</li>
                                             <li><span class="fa fa-check"></span>Bonus Resources</li>
                                             <li><span class="fa fa-check"></span>Key Takeaways</li>
                                         </ul>
@@ -447,14 +472,14 @@
                                             <li><span class="fa fa-check"></span>Setup of GitHub and Domain Accounts</li>
                                             <li><span class="fa fa-check"></span>Creation and Organization of Your GitHub Repository</li>
                                             <li><span class="fa fa-check"></span>Customized Images, Files, and Website Content Based on Your Brand</li>
-											<li><span class="fa fa-check"></span>Secure SSL Configuration with HTTPS via GitHub Pages</li>
-											<li><span class="fa fa-check"></span>Integration of a Purchase Link or Contact Form</li>
-											<li><span class="fa fa-check"></span>Website Deployment Using GitHub Pages</li>
-											<li><span class="fa fa-check"></span>Optimized SEO for Better Search Engine Visibility</li>
-											<li><span class="fa fa-check"></span>Accessibility Features for Inclusive User Experience</li>
-											<li><span class="fa fa-check"></span>Basic Google Analytics Setup for Performance Tracking</li>
-											<li><span class="fa fa-check"></span>30 Days of Post-Launch Support for Minor Updates</li>
-											<li><span class="fa fa-check"></span>No Subscription Fees, Unlike Squarespace or Wix</li>
+                                            <li><span class="fa fa-check"></span>Secure SSL Configuration with HTTPS via GitHub Pages</li>
+                                            <li><span class="fa fa-check"></span>Integration of a Purchase Link or Contact Form</li>
+                                            <li><span class="fa fa-check"></span>Website Deployment Using GitHub Pages</li>
+                                            <li><span class="fa fa-check"></span>Optimized SEO for Better Search Engine Visibility</li>
+                                            <li><span class="fa fa-check"></span>Accessibility Features for Inclusive User Experience</li>
+                                            <li><span class="fa fa-check"></span>Basic Google Analytics Setup for Performance Tracking</li>
+                                            <li><span class="fa fa-check"></span>30 Days of Post-Launch Support for Minor Updates</li>
+                                            <li><span class="fa fa-check"></span>No Subscription Fees, Unlike Squarespace or Wix</li>
                                         </ul>
                                         <!--pricing-item-list-->
                                         <a href="contact.html" class="ogency-btn">Apply Now</a>
@@ -779,42 +804,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
