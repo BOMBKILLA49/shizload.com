@@ -42,9 +42,6 @@
                 width: 48%;
                 margin-right: 2%;
             }
-            .about-three__content {
-                overflow: hidden;
-            }
         }
         @media (max-width: 991px) {
             .about-three__thumb,
@@ -53,6 +50,11 @@
                 width: 100%;
                 margin: 0;
             }
+        }
+        .about-three .container::after {
+            content: "";
+            display: table;
+            clear: both;
         }
     </style>
 </head>
@@ -129,7 +131,7 @@
         </section><!-- /.page-header -->
         <!-- About Start -->
         <section class="about-three">
-            <div class="container clearfix">
+            <div class="container">
                 <div class="about-three__thumb">
                     <!-- about thumb start -->
                     <div class="about-three__thumb--one wow fadeInLeft animated" data-wow-delay="300ms">
@@ -333,7 +335,6 @@
             </div>
         </section>
         <!--Testimonial End-->
-        <br>
         <div class="client-carousel client-carousel--about">
             <div class="container">
                 <h5 class="client-carousel__tilte"><span>1K+ Brands Trust Us</span></h5><!-- section-title -->
