@@ -113,7 +113,7 @@
                 </div><!-- section-title -->
                 <div class="contact-one__left text-center">
                     <div class="contact-one__form-box">
-                        <form action="https://forms.un-static.com/forms/ce08690def5fc95639d581f4c8c62f72a8f2d524" method="post" class="contact-one__form" novalidate="novalidate">
+                        <form action="" method="post" class="contact-one__form" novalidate="novalidate" id="serviceForm">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="contact-one__input-box">
@@ -132,7 +132,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="contact-one__input-box">
-                                        <select class="selectpicker" name="service" aria-label="Default select example">
+                                        <select class="selectpicker" name="service" aria-label="Default select example" id="serviceSelect">
                                             <option selected>Select service</option>
                                             <option value="1">1-on-1 Classes</option>
                                             <option value="3">Turn-Key Web Development</option>
@@ -140,9 +140,6 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12">
-                                    <div class="contact-one__input-box text-message-box">
-                                        <textarea name="message" placeholder="Write Comment"></textarea>
-                                    </div>
                                     <div class="contact-one__btn-box">
                                         <button type="submit" class="ogency-btn">Proceed</button>
                                     </div>
@@ -323,11 +320,26 @@
     <script src="assets/vendors/countdown/countdown.min.js"></script>
     <!-- template js -->
     <script src="assets/js/ogency.js"></script>
+    <script>
+        $(document).ready(function() {
+            const form = document.getElementById('serviceForm');
+            const select = document.getElementById('serviceSelect');
+
+            function updateFormAction() {
+                const selectedValue = select.value;
+                if (selectedValue === '1') {
+                    form.action = 'https://forms.un-static.com/forms/f0c8bea2347faac5f5f58e38d8a7bd3366a8d7ca';
+                } else if (selectedValue === '3') {
+                    form.action = 'https://forms.un-static.com/forms/b5ba621fc16c104a1cf27fdc5b4e74f5b0d9805e';
+                } else {
+                    form.action = '';
+                }
+            }
+
+            select.addEventListener('change', updateFormAction);
+            updateFormAction(); // Initial call
+        });
+    </script>
 </body>
 
 </html>
-
-
-
-
-
